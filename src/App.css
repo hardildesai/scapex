@@ -1,0 +1,4 @@
+/* App-level reset — sections handle their own spacing */
+main {
+  display: block;
+}

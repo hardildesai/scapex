@@ -1,0 +1,104 @@
+.divisions {
+  background-color: #f4f4f2;
+  padding: 60px 0 80px;
+}
+
+.divisions__header {
+  margin-bottom: 28px;
+}
+
+.divisions__label {
+  font-size: 0.65rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #888888;
+  margin-bottom: 10px;
+}
+
+.divisions__title {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #111111;
+  line-height: 1.3;
+  letter-spacing: -0.02em;
+  max-width: 520px;
+}
+
+/* ── Grid ── */
+.divisions__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  height: 480px;
+}
+
+.divisions__col {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* ── Cards ── */
+.divisions__card {
+  position: relative;
+  border-radius: 6px;
+  overflow: hidden;
+  background: #cccccc;
+}
+
+.divisions__card--solar {
+  height: 100%;
+}
+
+.divisions__col .divisions__card {
+  flex: 1;
+}
+
+.divisions__card--dark {
+  background-color: #0f1e35;
+}
+
+.divisions__img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Overlay */
+.divisions__overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.55) 0%,
+    rgba(0, 0, 0, 0.05) 50%,
+    transparent 100%
+  );
+  display: flex;
+  align-items: flex-end;
+  padding: 20px;
+}
+
+.divisions__card-title {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: #ffffff;
+  line-height: 1.3;
+}
+
+/* ── Responsive ── */
+@media (max-width: 860px) {
+  .divisions__grid {
+    grid-template-columns: 1fr;
+    height: auto;
+  }
+  .divisions__card--solar {
+    height: 300px;
+  }
+  .divisions__col .divisions__card {
+    height: 180px;
+    flex: none;
+  }
+}
