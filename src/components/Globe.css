@@ -1,0 +1,59 @@
+/* ── Globe / Global Reach Section ── */
+.globe {
+  background-color: #0d1b2e;
+  padding: 64px 0 0;
+  overflow: hidden;
+  position: relative;
+}
+
+.globe__label {
+  font-size: 0.65rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #6b8aad;
+  margin-bottom: 20px;
+}
+
+.globe__heading {
+  font-size: clamp(1.8rem, 3vw, 2.6rem);
+  font-weight: 700;
+  color: #ffffff;
+  line-height: 1.15;
+  letter-spacing: -0.03em;
+  max-width: 520px;
+  margin-bottom: 0;
+}
+
+.globe__heading-italic {
+  font-style: italic;
+  font-family: var(--font-serif);
+  font-weight: 700;
+  color: #c8a84b;
+}
+
+/* ── World Map ── */
+.globe__map-wrap {
+  width: 100%;
+  margin-top: 32px;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+.globe__map-svg {
+  width: 100%;
+  max-width: 1080px;
+  height: auto;
+  display: block;
+}
+
+@media (max-width: 860px) {
+  .globe {
+    padding: 48px 0 0;
+  }
+  .globe__heading {
+    font-size: 1.6rem;
+  }
+}

@@ -32,8 +32,11 @@ export default function Divisions(): JSX.Element {
               </div>
             </article>
 
-            <article className="divisions__card divisions__card--dark" id="division-industrial">
-              {/* Dark navy card — no overlay text in screenshot */}
+            <article className="divisions__card divisions__card--dark" id="division-logistics">
+              <img src="/export.png" alt="Export &amp; Logistics" className="divisions__img" />
+              <div className="divisions__overlay">
+                <h3 className="divisions__card-title">Export &amp; Logistics</h3>
+              </div>
             </article>
           </div>
 

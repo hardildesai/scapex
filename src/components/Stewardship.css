@@ -1,0 +1,113 @@
+/* ── Stewardship Section ── */
+.stewardship {
+  background-color: #f9f9f7;
+  padding: 72px 0 80px;
+  position: relative;
+  border-top: 1px solid #e8e8e4;
+}
+
+/* Vertical label on the left edge */
+.stewardship__side {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 28px;
+  height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: visible;
+}
+
+.stewardship__side-text {
+  font-size: 0.60rem;
+  font-weight: 600;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: #aaaaaa;
+  white-space: nowrap;
+  transform: rotate(-90deg);
+  transform-origin: center center;
+  display: block;
+}
+
+/* Container needs left offset for vertical label */
+.stewardship__container {
+  padding-left: 60px;
+}
+
+/* Two portrait cards */
+.stewardship__cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 28px;
+}
+
+.stewardship__card {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Photo */
+.stewardship__img-wrap {
+  width: 100%;
+  aspect-ratio: 3 / 4;
+  overflow: hidden;
+  border-radius: 4px;
+  background: #2a2a2a;
+  margin-bottom: 20px;
+}
+
+.stewardship__img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  filter: grayscale(100%) contrast(1.05);
+}
+
+/* Text info */
+.stewardship__info {
+  padding: 0 4px;
+}
+
+.stewardship__quote {
+  font-size: 0.78rem;
+  color: #555555;
+  line-height: 1.7;
+  font-style: italic;
+  margin-bottom: 14px;
+}
+
+.stewardship__name {
+  font-size: 0.80rem;
+  font-weight: 700;
+  color: #111111;
+  letter-spacing: -0.01em;
+  margin-bottom: 2px;
+}
+
+.stewardship__title {
+  font-size: 0.68rem;
+  font-weight: 400;
+  color: #888888;
+  letter-spacing: 0.02em;
+}
+
+/* ── Responsive ── */
+@media (max-width: 860px) {
+  .stewardship__side {
+    display: none;
+  }
+  .stewardship__container {
+    padding-left: 20px;
+  }
+  .stewardship__cards {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+  .stewardship__img-wrap {
+    aspect-ratio: 4 / 3;
+  }
+}
