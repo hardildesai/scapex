@@ -1,4 +1,4 @@
-import './Stewardship.css'
+
 
 interface Leader {
   id: string
@@ -29,23 +29,22 @@ const leaders: Leader[] = [
 
 export default function Stewardship(): JSX.Element {
   return (
-    <section className="stewardship" id="stewardship">
+    <section className="bg-[#f9f9f7] py-[72px] pb-[80px] relative border-t border-[#e8e8e4]" id="stewardship">
       {/* Vertical side label */}
-      <div className="stewardship__side" aria-hidden="true">
-        <span className="stewardship__side-text">— STEWARDSHIP</span>
+      <div className="hidden md:flex absolute left-0 top-1/2 -translate-y-1/2 w-7 h-[200px] items-center justify-center overflow-visible" aria-hidden="true">
+        <span className="text-[0.60rem] font-semibold tracking-[0.22em] uppercase text-[#aaa] whitespace-nowrap rotate-[-90deg] block">— STEWARDSHIP</span>
       </div>
-
-      <div className="container stewardship__container">
-        <div className="stewardship__cards">
+      <div className="max-w-[1180px] mx-auto px-10 w-full pl-[60px] md:pl-[60px]">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-7">
           {leaders.map((l) => (
-            <article className="stewardship__card" key={l.id} id={l.id}>
-              <div className="stewardship__img-wrap">
-                <img src={l.img} alt={l.name} className="stewardship__img" />
+            <article className="flex flex-col" key={l.id} id={l.id}>
+              <div className="w-full aspect-[3/4] md:aspect-[3/4] overflow-hidden rounded bg-[#2a2a2a] mb-5">
+                <img src={l.img} alt={l.name} className="w-full h-full object-cover block grayscale contrast-105" />
               </div>
-              <div className="stewardship__info">
-                <p className="stewardship__quote">"{l.quote}"</p>
-                <p className="stewardship__name">{l.name}</p>
-                <p className="stewardship__title">{l.title}</p>
+              <div className="px-1">
+                <p className="text-[0.78rem] text-[#555] leading-[1.7] italic mb-3.5">"{l.quote}"</p>
+                <p className="text-[0.80rem] font-bold text-[#111] tracking-tight mb-0.5">{l.name}</p>
+                <p className="text-[0.68rem] font-normal text-[#888] tracking-wide">{l.title}</p>
               </div>
             </article>
           ))}

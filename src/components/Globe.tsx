@@ -1,23 +1,19 @@
-import './Globe.css'
+
 
 export default function Globe(): JSX.Element {
   return (
-    <section className="globe" id="global-reach">
-      <div className="container">
-
+    <section className="bg-[#0d1b2e] pt-16 overflow-hidden relative" id="global-reach">
+      <div className="max-w-[1180px] mx-auto px-10 w-full">
         {/* Section label */}
-        <p className="globe__label">03 / Global Reach</p>
-
+        <p className="text-[0.65rem] font-semibold tracking-[0.14em] uppercase text-[#6b8aad] mb-5">03 / Global Reach</p>
         {/* Headline */}
-        <h2 className="globe__heading">
+        <h2 className="text-[clamp(1.8rem,3vw,2.6rem)] font-bold text-white leading-[1.15] tracking-tight max-w-[520px] mb-0">
           Bridging Continents{' '}
-          <em className="globe__heading-italic">with Precision</em>
+          <em className="italic font-bold text-[#c8a84b] not-italic:font-serif">with Precision</em>
         </h2>
-
       </div>
-
       {/* World Map — dot matrix SVG */}
-      <div className="globe__map-wrap" aria-hidden="true">
+      <div className="w-full mt-8 overflow-hidden flex justify-center items-end" aria-hidden="true">
         <WorldMapDots />
       </div>
     </section>

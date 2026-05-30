@@ -9,9 +9,9 @@ import Sustainability from './components/Sustainability.tsx'
 import Stewardship from './components/Stewardship.tsx'
 import News from './components/News.tsx'
 import Footer from './components/Footer.tsx'
-import './App.css'
+// App-level reset is handled by Tailwind's preflight and utility classes.
 
-export default function App(): JSX.Element {
+export default function App() {
   return (
     <>
       <AnnouncementBar />

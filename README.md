@@ -1,3 +1,17 @@
+# Tailwind CSS
+
+This project uses [Tailwind CSS](https://tailwindcss.com/) for utility-first styling.
+
+## Usage
+
+- Main Tailwind file: `src/tailwind.css`
+- Tailwind is configured in `tailwind.config.js` and processed via PostCSS (`postcss.config.js`).
+- To use Tailwind classes, add them to your React components as needed.
+
+## Development
+
+When running the dev server (`npm run dev`), Tailwind styles will be applied automatically.
+
 # React + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.

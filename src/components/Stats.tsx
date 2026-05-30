@@ -1,4 +1,4 @@
-import './Stats.css'
+
 
 interface StatItem {
   value: string
@@ -13,33 +13,30 @@ const stats: StatItem[] = [
 
 export default function Stats(): JSX.Element {
   return (
-    <section className="stats" id="stats">
-      <div className="container">
-        <div className="stats__inner">
-
+    <section className="bg-[#f4f4f2] border-y border-[#e0e0de] py-10" id="stats">
+      <div className="max-w-[1180px] mx-auto px-10 w-full">
+        <div className="grid grid-cols-1 md:grid-cols-[auto_1px_1fr] items-center gap-y-6 md:gap-x-12">
           {/* Left: Label + Heading */}
-          <div className="stats__left">
-            <p className="stats__label-top">Scale Across X City</p>
-            <h2 className="stats__heading">
+          <div className="max-w-[280px]">
+            <p className="text-[0.65rem] font-semibold tracking-[0.14em] uppercase text-[#888] mb-2.5">Scale Across X City</p>
+            <h2 className="text-[0.88rem] font-semibold text-[#1a1a1a] leading-[1.5] tracking-tight">
               Demonstrating Massive<br />
               Impact Across All<br />
               Operating Divisions
             </h2>
           </div>
-
           {/* Vertical separator */}
-          <div className="stats__sep" aria-hidden="true" />
-
+          <div className="hidden md:block w-px h-16 bg-[#d0d0ce] flex-shrink-0" aria-hidden="true" />
+          <div className="block md:hidden w-full h-px bg-[#d0d0ce] my-4" aria-hidden="true" />
           {/* Right: Stat items */}
-          <div className="stats__items" role="list">
+          <div className="flex gap-7 md:gap-12 items-start flex-wrap" role="list">
             {stats.map((s) => (
-              <div className="stats__item" key={s.label} role="listitem">
-                <span className="stats__value">{s.value}</span>
-                <span className="stats__item-label">{s.label}</span>
+              <div className="flex flex-col gap-1" key={s.label} role="listitem">
+                <span className="text-[1.7rem] font-bold text-[#111] tracking-tight leading-none">{s.value}</span>
+                <span className="text-[0.70rem] font-normal text-[#888] tracking-wide">{s.label}</span>
               </div>
             ))}
           </div>
-
         </div>
       </div>
     </section>
