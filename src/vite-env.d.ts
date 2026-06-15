@@ -1,4 +1,5 @@
 /// <reference types="vite/client" />
+/// <reference types="react" />
 
 // Declare CSS module types
 declare module '*.css'
@@ -19,4 +20,12 @@ declare module '*.jpg' {
 declare module '*.webp' {
   const content: string
   export default content
+}
+
+import React from 'react'
+
+declare global {
+  namespace JSX {
+    interface Element extends React.JSX.Element {}
+  }
 }

@@ -4,18 +4,32 @@ import { Link, useLocation } from 'react-router-dom'
 interface NavLink { label: string; href: string; isRoute?: boolean }
 
 const navLinks: NavLink[] = [
-  { label: 'About',          href: '#about' },
-  { label: 'Our Ecosystem',  href: '#ecosystem' },
-  { label: 'Industries',     href: '#industries' },
+  { label: 'About', href: '#about' },
+  { label: 'Our Ecosystem', href: '#ecosystem' },
+  { label: 'Industries', href: '#industries' },
   { label: 'Sustainability', href: '/sustainability', isRoute: true },
-  { label: 'Investors',      href: '/investors',     isRoute: true },
-  { label: 'Media',          href: '#media' },
-  { label: 'Careers',        href: '/careers',       isRoute: true },
+  { label: 'Investors', href: '/investors', isRoute: true },
+  { label: 'Media', href: '#media' },
+  { label: 'Careers', href: '/careers', isRoute: true },
 ]
 
 export default function Navbar(): JSX.Element {
+  const [showNavbar, setShowNavbar] = useState<boolean>(true)
   const [menuOpen, setMenuOpen] = useState<boolean>(false)
   const location = useLocation()
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY === 0) {
+        setShowNavbar(true)
+      } else {
+        setShowNavbar(false)
+        setMenuOpen(false)
+      }
+    }
+    window.addEventListener('scroll', handleScroll)
+    return () => window.removeEventListener('scroll', handleScroll)
+  }, [])
 
   useEffect(() => {
     const onKey = (e: KeyboardEvent) => e.key === 'Escape' && setMenuOpen(false)
@@ -24,24 +38,25 @@ export default function Navbar(): JSX.Element {
   }, [])
 
   const linkClass = (href: string) =>
-    `inline-block px-3 text-[0.75rem] font-normal tracking-[0.01em] whitespace-nowrap transition-colors duration-150 hover:text-[#111] ${
-      location.pathname === href ? 'text-[#0f2040] font-semibold' : 'text-[#333]'
+    `inline-block px-3 text-[0.75rem] font-bold tracking-[0.01em] whitespace-nowrap transition-colors duration-150 hover:text-black/80 ${location.pathname === href ? 'text-black' : 'text-black'
     }`
 
   return (
     <nav
-      className="fixed top-8 left-0 right-0 z-[90] bg-white/97 border-b border-[#e8e8e8] h-[52px]"
+      className={`fixed top-8 left-0 right-0 z-[90] bg-white/97 border-b border-[#e8e8e8] h-[52px] transition-transform duration-300 ease-in-out ${
+        showNavbar ? 'translate-y-0' : '-translate-y-28'
+      }`}
       role="navigation"
       aria-label="Main navigation"
     >
       <div className="flex items-center h-[52px] max-w-[1180px] mx-auto px-10 w-full">
         {/* Logo */}
-        <Link to="/" className="flex-shrink-0 no-underline mr-7" aria-label="Scapex Home">
-          <span className="text-[1rem] font-bold text-[#111] tracking-tight">Scapex</span>
+        <Link to="/" className="flex-shrink-0 no-underline mr-7 flex items-center -ml-28" aria-label="Scapex Home">
+          <img src="/logo/main-logo.png" alt="Scapex Logo" className="h-11 w-auto object-contain" />
         </Link>
 
         {/* Desktop Links */}
-        <ul className="hidden md:flex items-center list-none flex-1 gap-0" role="list">
+        <ul className="hidden md:flex items-center list-none font-mono flex-1 gap-8 ml-26" role="list">
           {navLinks.map((link) => (
             <li key={link.label}>
               {link.isRoute ? (
@@ -49,7 +64,7 @@ export default function Navbar(): JSX.Element {
                   {link.label}
                 </Link>
               ) : (
-                <a href={link.href} className="inline-block px-3 text-[0.75rem] font-normal text-[#333] tracking-[0.01em] whitespace-nowrap transition-colors duration-150 hover:text-[#111]">
+                <a href={link.href} className="inline-block px-3 text-[0.75rem] font-bold text-black tracking-[0.01em] whitespace-nowrap transition-colors duration-150 hover:text-black/80">
                   {link.label}
                 </a>
               )}
@@ -58,9 +73,9 @@ export default function Navbar(): JSX.Element {
         </ul>
 
         {/* Actions */}
-        <div className="flex items-center gap-2 ml-auto">
+        <div className="flex items-center gap-2 ml-40">
           <button
-            className="bg-[#2a6840] text-white text-[0.73rem] font-semibold rounded px-4 py-[7px] hover:bg-[#1e4f30] transition-colors duration-200 whitespace-nowrap"
+            className="bg-gold text-black text-[0.73rem] font-mono font-bold  rounded-xl px-4 py-[7px] hover:bg-[#1e4f30] transition-colors duration-200 whitespace-nowrap"
             id="nav-cta-partner"
           >
             Partner With Us

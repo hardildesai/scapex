@@ -1,19 +1,64 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&display=swap');
 @import "tailwindcss";
 
 @theme {
   --font-sans: 'Inter', ui-sans-serif, system-ui, sans-serif;
+  /* fancy */
   --font-serif: 'Playfair Display', Georgia, 'Times New Roman', serif;
+  /* navbar and  cta */
+  --font-mono: 'Roboto Mono', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  /* description and all */
+  --font-urbanist: 'Urbanist', sans-serif;
+  /* heading */
+  --font-bricolage: 'Bricolage Grotesque', sans-serif;
+
+  /* Color Palette */
+  --color-primary: #1a5faa;
+  --color-deep-navy: #0D2E45;
+  --color-gold: #F5A31C;
+  --color-warm-cream: #FFF8EC;
+  --color-forest-green: #2E8B57;
+  --color-slate-gray: #5B6A7A;
+  --color-ice-blue: #F0F7FF;
+}
+
+/* Base styles */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Inter', ui-sans-serif, system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: #111111;
+  background: #ffffff;
 }
 
 /* ── Keyframes for AnnouncementBar ── */
 @keyframes marquee {
-  0%   { transform: translateX(0); }
-  100% { transform: translateX(-50%); }
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(-50%);
+  }
 }
 
 @keyframes livepulse {
-  0%, 100% { opacity: 1; }
-  50%       { opacity: 0.35; }
+
+  0%,
+  100% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0.35;
+  }
 }
 
 .animate-marquee {
@@ -22,6 +67,21 @@
 
 .animate-livepulse {
   animation: livepulse 1.4s ease-in-out infinite;
+}
+
+/* ── Keyframes for Grid Background ── */
+@keyframes grid-move {
+  0% {
+    background-position: 0 0;
+  }
+
+  100% {
+    background-position: 44px 44px;
+  }
+}
+
+.animate-grid-move {
+  animation: grid-move 8s linear infinite;
 }
 
 /* ══════════════════════════════════════════
@@ -37,6 +97,7 @@
   min-height: 420px;
   padding-top: 24px;
 }
+
 .careers-hero-right {
   position: relative;
   height: 460px;
@@ -51,6 +112,7 @@
   max-width: 580px;
   text-align: left;
 }
+
 .investors-hero-heading {
   white-space: nowrap;
 }
@@ -133,6 +195,7 @@
     padding-bottom: 36px !important;
     gap: 28px !important;
   }
+
   #hero h1 {
     font-size: clamp(2rem, 9vw, 2.6rem) !important;
   }
@@ -142,19 +205,25 @@
     flex-direction: column !important;
     gap: 20px !important;
   }
-  #stats .hidden.md\:block { display: none !important; }
+
+  #stats .hidden.md\:block {
+    display: none !important;
+  }
 
   /* Architecture cards — stack 3-col to 1-col */
   #ecosystem .grid-cols-3 {
     grid-template-columns: 1fr !important;
   }
-  #ecosystem .grid-cols-3 > div {
+
+  #ecosystem .grid-cols-3>div {
     border-right: none !important;
     border-bottom: 1px solid #d8d8d4 !important;
   }
-  #ecosystem .grid-cols-3 > div:last-child {
+
+  #ecosystem .grid-cols-3>div:last-child {
     border-bottom: none !important;
   }
+
   #ecosystem .md\:grid-cols-2 {
     grid-template-columns: 1fr !important;
     gap: 16px !important;
@@ -164,6 +233,7 @@
   #industries .md\:h-\[440px\] {
     height: auto !important;
   }
+
   #industries article {
     height: 220px !important;
   }
@@ -178,14 +248,21 @@
     grid-template-columns: 1fr !important;
     gap: 28px !important;
   }
+
   #sustainability [style*="height: '300px'"],
   #sustainability [style*="height: 300px"] {
     height: 240px !important;
   }
 
   /* Stewardship — hide vertical side label on mobile */
-  #stewardship > div:first-child { display: none !important; }
-  #stewardship .pl-14 { padding-left: 18px !important; }
+  #stewardship>div:first-child {
+    display: none !important;
+  }
+
+  #stewardship .pl-14 {
+    padding-left: 18px !important;
+  }
+
   #stewardship .md\:grid-cols-2 {
     grid-template-columns: 1fr !important;
     gap: 32px !important;
@@ -197,7 +274,7 @@
   }
 
   /* Footer */
-  #media ~ footer .md\:grid-cols-\[220px_1fr\] {
+  #media~footer .md\:grid-cols-\[220px_1fr\] {
     grid-template-columns: 1fr !important;
   }
 
@@ -207,22 +284,32 @@
     min-height: auto !important;
     padding-bottom: 0 !important;
   }
+
   .careers-hero-right {
     height: 260px !important;
   }
-  .careers-hero-right > div:first-child { display: none !important; } /* hide decoration */
 
-  #openings .grid { grid-template-columns: 1fr !important; }
+  .careers-hero-right>div:first-child {
+    display: none !important;
+  }
+
+  /* hide decoration */
+
+  #openings .grid {
+    grid-template-columns: 1fr !important;
+  }
 
   /* ══ INVESTORS PAGE ══ */
   #investors-hero {
     height: 300px !important;
   }
+
   .investors-hero-text {
     right: 18px !important;
     bottom: 16px !important;
     max-width: calc(100% - 36px) !important;
   }
+
   .investors-hero-heading {
     white-space: normal !important;
     font-size: clamp(1.5rem, 6vw, 2rem) !important;
@@ -231,6 +318,7 @@
   .investors-metrics-grid {
     grid-template-columns: 1fr 1fr !important;
   }
+
   .investors-reports-grid {
     grid-template-columns: 1fr 1fr !important;
   }
@@ -240,7 +328,8 @@
     grid-template-columns: 1fr !important;
     min-height: auto !important;
   }
-  .sust-hero-grid > div:last-child {
+
+  .sust-hero-grid>div:last-child {
     height: 220px !important;
   }
 
@@ -253,7 +342,8 @@
     grid-template-columns: 1fr !important;
     gap: 28px !important;
   }
-  .impact-layout > div:first-child {
+
+  .impact-layout>div:first-child {
     aspect-ratio: 16/9 !important;
   }
 }
@@ -265,11 +355,12 @@
   .investors-metrics-grid {
     grid-template-columns: 1fr !important;
   }
+
   .investors-reports-grid {
     grid-template-columns: 1fr !important;
   }
+
   #openings .grid {
     grid-template-columns: 1fr !important;
   }
 }
-

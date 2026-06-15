@@ -3,16 +3,13 @@ export default function Globe(): JSX.Element {
     <section className="bg-[#0d1b2e] pt-14 pb-6 overflow-hidden relative" id="global-reach">
       <div className="max-w-[1180px] mx-auto px-10 w-full">
         <p className="text-[0.63rem] font-semibold tracking-[0.15em] uppercase text-[#6b8aad] mb-5">
-          03 / Global Reach
+          03 / GLOBAL CONNECTIONS
         </p>
         <h2
-          className="font-bold text-white leading-[1.15] tracking-tight max-w-[520px] mb-0"
+          className="font-serif font-bold text-[#c8a84b] leading-[1.15] tracking-tight max-w-[600px] mb-0"
           style={{ fontSize: 'clamp(1.8rem, 3vw, 2.6rem)' }}
         >
-          Bridging Continents{' '}
-          <em style={{ fontFamily: 'Playfair Display, Georgia, serif', fontStyle: 'italic', color: '#c8a84b', fontWeight: 700 }}>
-            with Precision
-          </em>
+          Bridging Continents with Precision
         </h2>
       </div>
 
@@ -146,8 +143,8 @@ function WorldMapDots(): JSX.Element {
           cx={col * (DOT + GAP) + DOT / 2}
           cy={row * (DOT + GAP) + DOT / 2}
           r={DOT / 2}
-          fill="#c8a84b"
-          opacity="0.85"
+          fill="#ffffff"
+          opacity="0.75"
         />
       ))}
     </svg>
