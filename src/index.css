@@ -1,12 +1,16 @@
-/* All global styles are now handled by Tailwind CSS. */
+/* Base styles that complement Tailwind's preflight */
+html {
+  scroll-behavior: smooth;
+}
 
-:root {
-	--color-primary: #004D94;
-	--color-deep-navy: #002E45;
-	--color-amber-gold: #F5A31C;
-	--color-warm-cream: #FFF8EC;
-	--color-forest-green: #2BB857;
-	--color-steel-grey: #5B6A7A;
-	--color-light-slate: #F0F7FF;
-	--color-white: #FFFFFF;
+body {
+  font-family: 'Inter', ui-sans-serif, system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: #111111;
+  background: #ffffff;
+}
+
+* {
+  box-sizing: border-box;
 }

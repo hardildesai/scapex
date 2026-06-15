@@ -1,23 +1,21 @@
 import { useState, useEffect } from 'react'
+import { Link, useLocation } from 'react-router-dom'
 
-
-interface NavLink {
-  label: string
-  href: string
-}
+interface NavLink { label: string; href: string; isRoute?: boolean }
 
 const navLinks: NavLink[] = [
-  { label: 'About', href: '#about' },
-  { label: 'Our Ecosystem', href: '#ecosystem' },
-  { label: 'Industries', href: '#industries' },
-  { label: 'Sustainability', href: '#sustainability' },
-  { label: 'Investors', href: '#investors' },
-  { label: 'Media', href: '#media' },
-  { label: 'Careers', href: '#careers' },
+  { label: 'About',          href: '#about' },
+  { label: 'Our Ecosystem',  href: '#ecosystem' },
+  { label: 'Industries',     href: '#industries' },
+  { label: 'Sustainability', href: '/sustainability', isRoute: true },
+  { label: 'Investors',      href: '/investors',     isRoute: true },
+  { label: 'Media',          href: '#media' },
+  { label: 'Careers',        href: '/careers',       isRoute: true },
 ]
 
 export default function Navbar(): JSX.Element {
   const [menuOpen, setMenuOpen] = useState<boolean>(false)
+  const location = useLocation()
 
   useEffect(() => {
     const onKey = (e: KeyboardEvent) => e.key === 'Escape' && setMenuOpen(false)
@@ -25,87 +23,100 @@ export default function Navbar(): JSX.Element {
     return () => window.removeEventListener('keydown', onKey)
   }, [])
 
-  return (
+  const linkClass = (href: string) =>
+    `inline-block px-3 text-[0.75rem] font-normal tracking-[0.01em] whitespace-nowrap transition-colors duration-150 hover:text-[#111] ${
+      location.pathname === href ? 'text-[#0f2040] font-semibold' : 'text-[#333]'
+    }`
 
+  return (
     <nav
-      className="fixed top-8 left-0 right-0 z-[90] bg-white/95 border-b border-[#e8e8e8] h-[52px]"
+      className="fixed top-8 left-0 right-0 z-[90] bg-white/97 border-b border-[#e8e8e8] h-[52px]"
       role="navigation"
       aria-label="Main navigation"
     >
       <div className="flex items-center h-[52px] max-w-[1180px] mx-auto px-10 w-full">
-
         {/* Logo */}
-
-        <a
-          href="/"
-          className="flex items-center gap-1.5 flex-shrink-0 no-underline mr-7"
-          aria-label="Scapex Home"
-        >
-          <span className="text-base font-bold text-[#111] tracking-tight">Scapex</span>
-        </a>
+        <Link to="/" className="flex-shrink-0 no-underline mr-7" aria-label="Scapex Home">
+          <span className="text-[1rem] font-bold text-[#111] tracking-tight">Scapex</span>
+        </Link>
 
         {/* Desktop Links */}
-
-        <ul className="flex items-center list-none flex-1 gap-0" role="list">
+        <ul className="hidden md:flex items-center list-none flex-1 gap-0" role="list">
           {navLinks.map((link) => (
             <li key={link.label}>
-              <a
-                href={link.href}
-                className="inline-block px-3 text-[0.76rem] font-normal text-[#333] tracking-wide whitespace-nowrap transition-colors duration-150 hover:text-[#111]"
-              >
-                {link.label}
-              </a>
+              {link.isRoute ? (
+                <Link to={link.href} className={linkClass(link.href)}>
+                  {link.label}
+                </Link>
+              ) : (
+                <a href={link.href} className="inline-block px-3 text-[0.75rem] font-normal text-[#333] tracking-[0.01em] whitespace-nowrap transition-colors duration-150 hover:text-[#111]">
+                  {link.label}
+                </a>
+              )}
             </li>
           ))}
         </ul>
 
         {/* Actions */}
-        <div className="flex items-center gap-2">
+        <div className="flex items-center gap-2 ml-auto">
           <button
-            className="bg-[#1a5faa] text-white text-xs font-semibold rounded px-4 py-2 hover:bg-[#174e8a] transition-colors"
+            className="bg-[#2a6840] text-white text-[0.73rem] font-semibold rounded px-4 py-[7px] hover:bg-[#1e4f30] transition-colors duration-200 whitespace-nowrap"
             id="nav-cta-partner"
           >
             Partner With Us
           </button>
           <button
-            className="ml-2 p-2 rounded hover:bg-gray-100 transition-colors"
+            className="p-2 rounded hover:bg-gray-100 transition-colors text-[#555]"
             id="nav-search-btn"
             aria-label="Search"
           >
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
               <circle cx="11" cy="11" r="8" />
               <path d="M21 21l-4.35-4.35" />
             </svg>
           </button>
           <button
-            className={`ml-2 flex flex-col justify-center items-center w-8 h-8 rounded border border-gray-300 transition-all ${menuOpen ? 'bg-gray-200' : 'bg-white'}`}
+            className="md:hidden flex flex-col justify-center gap-[5px] w-8 h-8 cursor-pointer p-1.5"
             id="nav-hamburger"
             aria-label="Toggle menu"
             aria-expanded={menuOpen}
             onClick={() => setMenuOpen(!menuOpen)}
           >
-            <span className="block w-5 h-0.5 bg-gray-700 mb-1" />
-            <span className="block w-5 h-0.5 bg-gray-700 mb-1" />
-            <span className="block w-5 h-0.5 bg-gray-700" />
+            <span className={`block h-[1.5px] bg-[#111] rounded transition-all duration-250 ${menuOpen ? 'translate-y-[6.5px] rotate-45' : ''}`} />
+            <span className={`block h-[1.5px] bg-[#111] rounded transition-all duration-250 ${menuOpen ? 'opacity-0' : ''}`} />
+            <span className={`block h-[1.5px] bg-[#111] rounded transition-all duration-250 ${menuOpen ? '-translate-y-[6.5px] -rotate-45' : ''}`} />
           </button>
         </div>
       </div>
 
-      <div className={`fixed top-[84px] left-0 right-0 bg-white shadow-lg z-[100] transition-transform duration-300 ${menuOpen ? 'translate-y-0' : '-translate-y-full'} md:hidden`}>
-        <ul role="list" className="flex flex-col p-4 gap-2">
+      {/* Mobile Drawer */}
+      <div className={`md:hidden fixed top-[84px] left-0 right-0 bg-white border-b border-[#e8e8e8] z-[89] transition-all duration-300 ${menuOpen ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none -translate-y-2'}`}>
+        <ul role="list" className="flex flex-col py-3 list-none">
           {navLinks.map((link) => (
             <li key={link.label}>
-              <a
-                href={link.href}
-                className="block px-4 py-2 text-base font-medium text-[#333] hover:text-[#111] hover:bg-gray-100 rounded transition-colors"
-                onClick={() => setMenuOpen(false)}
-              >
-                {link.label}
-              </a>
+              {link.isRoute ? (
+                <Link
+                  to={link.href}
+                  className="block px-6 py-2.5 text-[0.85rem] text-[#333] hover:bg-gray-50 hover:text-[#111] transition-colors"
+                  onClick={() => setMenuOpen(false)}
+                >
+                  {link.label}
+                </Link>
+              ) : (
+                <a
+                  href={link.href}
+                  className="block px-6 py-2.5 text-[0.85rem] text-[#333] hover:bg-gray-50 hover:text-[#111] transition-colors"
+                  onClick={() => setMenuOpen(false)}
+                >
+                  {link.label}
+                </a>
+              )}
             </li>
           ))}
-          <li>
-            <button className="w-full bg-[#1a5faa] text-white text-xs font-semibold rounded px-4 py-2 mt-2 hover:bg-[#174e8a] transition-colors">Partner With Us</button>
+          <li className="px-6 pt-2 pb-3">
+            <button className="w-full bg-[#2a6840] text-white text-[0.73rem] font-semibold rounded px-4 py-2 hover:bg-[#1e4f30] transition-colors">
+              Partner With Us
+            </button>
           </li>
         </ul>
       </div>

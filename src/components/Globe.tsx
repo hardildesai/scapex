@@ -1,19 +1,23 @@
-
-
 export default function Globe(): JSX.Element {
   return (
-    <section className="bg-[#0d1b2e] pt-16 overflow-hidden relative" id="global-reach">
+    <section className="bg-[#0d1b2e] pt-14 pb-6 overflow-hidden relative" id="global-reach">
       <div className="max-w-[1180px] mx-auto px-10 w-full">
-        {/* Section label */}
-        <p className="text-[0.65rem] font-semibold tracking-[0.14em] uppercase text-[#6b8aad] mb-5">03 / Global Reach</p>
-        {/* Headline */}
-        <h2 className="text-[clamp(1.8rem,3vw,2.6rem)] font-bold text-white leading-[1.15] tracking-tight max-w-[520px] mb-0">
+        <p className="text-[0.63rem] font-semibold tracking-[0.15em] uppercase text-[#6b8aad] mb-5">
+          03 / Global Reach
+        </p>
+        <h2
+          className="font-bold text-white leading-[1.15] tracking-tight max-w-[520px] mb-0"
+          style={{ fontSize: 'clamp(1.8rem, 3vw, 2.6rem)' }}
+        >
           Bridging Continents{' '}
-          <em className="italic font-bold text-[#c8a84b] not-italic:font-serif">with Precision</em>
+          <em style={{ fontFamily: 'Playfair Display, Georgia, serif', fontStyle: 'italic', color: '#c8a84b', fontWeight: 700 }}>
+            with Precision
+          </em>
         </h2>
       </div>
+
       {/* World Map — dot matrix SVG */}
-      <div className="w-full mt-8 overflow-hidden flex justify-center items-end" aria-hidden="true">
+      <div className="w-full mt-6 overflow-hidden flex justify-center items-end" aria-hidden="true">
         <WorldMapDots />
       </div>
     </section>
@@ -22,7 +26,6 @@ export default function Globe(): JSX.Element {
 
 /* ── Dot-matrix world map ── */
 function WorldMapDots(): JSX.Element {
-  // Simplified dot-pixel world map coordinates (col, row) on a 90×44 grid
   const dots: [number, number][] = [
     // North America
     [10,8],[11,8],[12,8],[13,8],[14,8],[15,8],[16,8],[17,8],[18,8],[19,8],
@@ -111,28 +114,13 @@ function WorldMapDots(): JSX.Element {
     [69,32],[70,32],[71,32],[72,32],
     [70,33],[71,33],
     // New Zealand
-    [76,31],[77,31],
-    [76,32],[77,32],
-    [77,33],
-    // Japan
-    [72,12],[73,12],[74,12],
-    [73,13],[74,13],
-    // Philippines / SE Asia
-    [70,18],[71,18],[72,18],
-    [71,19],[72,19],[73,19],
+    [76,31],[77,31],[76,32],[77,32],[77,33],
     // UK & Ireland
-    [33,7],[34,7],
-    [33,8],[34,8],
-    [34,9],
+    [33,7],[34,7],[33,8],[34,8],[34,9],
     // Iceland
-    [26,5],[27,5],[28,5],
-    [26,6],[27,6],
+    [26,5],[27,5],[28,5],[26,6],[27,6],
     // Madagascar
-    [45,24],[46,24],
-    [45,25],[46,25],
-    [45,26],
-    // Sri Lanka
-    [58,20],
+    [45,24],[46,24],[45,25],[46,25],[45,26],
     // Canada ext
     [10,6],[11,6],[12,6],[13,6],[14,6],[15,6],[16,6],[17,6],[18,6],[19,6],[20,6],[21,6],[22,6],
     [11,7],[12,7],[13,7],[14,7],[15,7],[16,7],[17,7],[18,7],[19,7],[20,7],[21,7],[22,7],
@@ -148,7 +136,7 @@ function WorldMapDots(): JSX.Element {
   return (
     <svg
       viewBox={`0 0 ${W} ${H}`}
-      className="globe__map-svg"
+      style={{ width: '100%', maxWidth: '960px', display: 'block' }}
       xmlns="http://www.w3.org/2000/svg"
       aria-hidden="true"
     >

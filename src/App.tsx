@@ -1,17 +1,20 @@
-import AnnouncementBar from './components/AnnouncementBar.tsx'
-import Navbar from './components/Navbar.tsx'
-import Hero from './components/Hero.tsx'
-import Stats from './components/Stats.tsx'
-import Architecture from './components/Architecture.tsx'
-import Divisions from './components/Divisions.tsx'
-import Globe from './components/Globe.tsx'
-import Sustainability from './components/Sustainability.tsx'
-import Stewardship from './components/Stewardship.tsx'
-import News from './components/News.tsx'
-import Footer from './components/Footer.tsx'
-// App-level reset is handled by Tailwind's preflight and utility classes.
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import AnnouncementBar from './components/AnnouncementBar'
+import Navbar from './components/Navbar'
+import Hero from './components/Hero'
+import InvestorsPage from './pages/InvestorsPage'
+import SustainabilityPage from './pages/SustainabilityPage'
+import Stats from './components/Stats'
+import Architecture from './components/Architecture'
+import Divisions from './components/Divisions'
+import Globe from './components/Globe'
+import Sustainability from './components/Sustainability'
+import Stewardship from './components/Stewardship'
+import News from './components/News'
+import Footer from './components/Footer'
+import CareersPage from './pages/CareersPage'
 
-export default function App() {
+function HomePage(): JSX.Element {
   return (
     <>
       <AnnouncementBar />
@@ -28,5 +31,18 @@ export default function App() {
       </main>
       <Footer />
     </>
+  )
+}
+
+export default function App(): JSX.Element {
+  return (
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/careers" element={<CareersPage />} />
+        <Route path="/investors" element={<InvestorsPage />} />
+        <Route path="/sustainability" element={<SustainabilityPage />} />
+      </Routes>
+    </BrowserRouter>
   )
 }
