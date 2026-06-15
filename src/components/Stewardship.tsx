@@ -31,9 +31,9 @@ export default function Stewardship(): JSX.Element {
       className="bg-[#f9f9f7] pt-14 pb-16 relative border-t border-[#e8e8e4] overflow-hidden"
       id="stewardship"
     >
-      {/* Vertical side label */}
+      {/* Vertical side label — hidden on mobile */}
       <div
-        className="absolute left-0 top-1/2 -translate-y-1/2 flex items-center justify-center overflow-visible"
+        className="hidden md:flex absolute left-0 top-1/2 -translate-y-1/2 items-center justify-center overflow-visible"
         style={{ width: 28, height: 200 }}
         aria-hidden="true"
       >
@@ -45,7 +45,7 @@ export default function Stewardship(): JSX.Element {
         </span>
       </div>
 
-      <div className="max-w-[1180px] mx-auto px-10 w-full pl-14">
+      <div className="max-w-[1180px] mx-auto px-6 md:px-10 w-full md:pl-14">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-7">
           {leaders.map((l) => (
             <article className="flex flex-col" key={l.id} id={l.id}>

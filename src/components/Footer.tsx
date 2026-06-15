@@ -40,7 +40,7 @@ const footerLinks = [
 export default function Footer(): JSX.Element {
   return (
     <footer className="bg-[#0d1b2e] pt-14" role="contentinfo">
-      <div className="max-w-[1180px] mx-auto px-10 w-full">
+      <div className="max-w-[1180px] mx-auto px-6 md:px-10 w-full">
 
         {/* Top: Logo + columns */}
         <div className="grid grid-cols-1 md:grid-cols-[220px_1fr] gap-8 md:gap-12 pb-12">

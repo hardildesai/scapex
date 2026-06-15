@@ -8,7 +8,7 @@ const bullets: string[] = [
 export default function Sustainability(): JSX.Element {
   return (
     <section className="bg-white pt-14 pb-16" id="sustainability">
-      <div className="max-w-[1180px] mx-auto px-10 w-full">
+      <div className="max-w-[1180px] mx-auto px-6 md:px-10 w-full">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-16 items-center">
 
           {/* Left: 2×2 photo grid */}

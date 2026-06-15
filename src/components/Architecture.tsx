@@ -1,7 +1,7 @@
 export default function Architecture(): JSX.Element {
   return (
     <section className="bg-[#f4f4f2] pt-12 pb-14" id="ecosystem">
-      <div className="max-w-[1180px] mx-auto px-10 w-full">
+      <div className="max-w-[1180px] mx-auto px-6 md:px-10 w-full">
 
         {/* Header: 2-col — label+title left, description right */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-start mb-10">
@@ -26,10 +26,10 @@ export default function Architecture(): JSX.Element {
         </div>
 
         {/* Three empty bordered cards */}
-        <div className="grid grid-cols-3 border border-[#d8d8d4] rounded overflow-hidden">
-          <div className="h-[160px] bg-white border-r border-[#d8d8d4]" />
-          <div className="h-[160px] bg-white border-r border-[#d8d8d4]" />
-          <div className="h-[160px] bg-white" />
+        <div className="grid grid-cols-1 md:grid-cols-3 border border-[#d8d8d4] rounded overflow-hidden">
+          <div className="h-[120px] md:h-[160px] bg-white border-b md:border-b-0 md:border-r border-[#d8d8d4]" />
+          <div className="h-[120px] md:h-[160px] bg-white border-b md:border-b-0 md:border-r border-[#d8d8d4]" />
+          <div className="h-[120px] md:h-[160px] bg-white" />
         </div>
 
       </div>
