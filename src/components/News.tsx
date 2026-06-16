@@ -35,8 +35,8 @@ const newsItems: NewsItem[] = [
 
 export default function News(): JSX.Element {
   return (
-    <section className="bg-white pt-14 pb-16 border-t border-[#e8e8e4]" id="media">
-      <div className="max-w-[1180px] mx-auto px-10 w-full">
+    <section className="bg-white pt-12 md:pt-14 pb-14 md:pb-16 border-t border-[#e8e8e4]" id="media">
+      <div className="max-w-[1180px] mx-auto px-6 md:px-10 w-full">
 
         {/* Header */}
         <div className="flex flex-wrap items-baseline justify-between gap-4 mb-7">

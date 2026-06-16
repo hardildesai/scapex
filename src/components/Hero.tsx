@@ -11,7 +11,7 @@ export default function Hero(): JSX.Element {
         aria-hidden="true"
       />
 
-      <div className="relative z-10 grid grid-cols-1 md:grid-cols-2 gap-[48px] items-start pt-[124px] pb-16 max-w-[1180px] mx-auto px-10">
+      <div className="relative z-10 grid grid-cols-1 md:grid-cols-2 gap-[48px] items-start pt-8 pb-12 md:pt-[124px] md:pb-16 max-w-[1180px] mx-auto px-6 md:px-10">
 
         {/* ── Left: Content ── */}
         <div className="pt-5">

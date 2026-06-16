@@ -1,7 +1,7 @@
 export default function Architecture(): JSX.Element {
   return (
     <section className="bg-warm-cream pt-24 pb-28" id="ecosystem">
-      <div className="max-w-[1180px] mx-auto px-10 w-full">
+      <div className="max-w-[1180px] mx-auto px-6 md:px-10 w-full">
 
         {/* Header: 2-col — label+title left, description right */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-start mb-10">
@@ -18,7 +18,7 @@ export default function Architecture(): JSX.Element {
               Industrial Network
             </h2>
           </div>
-          <p className="text-[0.80rem] font-serif font-medium text-black ml-40 leading-[1.75] max-w-[380px] md:pt-9">
+          <p className="text-[0.80rem] font-serif font-medium text-black ml-0 md:ml-40 leading-[1.75] max-w-[380px] md:pt-9">
             Our operations are not isolated silos. They are continuously
             interconnected threads of energy, resources, and logistics,
             optimised for massive scale.
@@ -26,10 +26,10 @@ export default function Architecture(): JSX.Element {
         </div>
 
         {/* Three empty bordered cards */}
-        <div className="grid grid-cols-3 border border-[#d8d8d4] rounded overflow-hidden">
-          <div className="h-[320px] bg-white border-r border-[#d8d8d4]" />
-          <div className="h-[320px] bg-white border-r border-[#d8d8d4]" />
-          <div className="h-[320px] bg-white" />
+        <div className="grid grid-cols-1 md:grid-cols-3 border border-[#d8d8d4] rounded overflow-hidden">
+          <div className="h-[200px] md:h-[320px] bg-white border-b md:border-b-0 md:border-r border-[#d8d8d4]" />
+          <div className="h-[200px] md:h-[320px] bg-white border-b md:border-b-0 md:border-r border-[#d8d8d4]" />
+          <div className="h-[200px] md:h-[320px] bg-white" />
         </div>
 
       </div>

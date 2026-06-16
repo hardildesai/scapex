@@ -1,7 +1,7 @@
 export default function Divisions(): JSX.Element {
   return (
-    <section className="bg-white pt-20 pb-20" id="industries">
-      <div className="max-w-[1180px] mx-auto px-10 w-full">
+    <section className="bg-white pt-12 md:pt-20 pb-12 md:pb-20" id="industries">
+      <div className="max-w-[1180px] mx-auto px-6 md:px-10 w-full">
 
         {/* Header */}
         <div className="mb-8">

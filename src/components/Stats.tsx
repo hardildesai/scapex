@@ -10,8 +10,8 @@ const stats: StatItem[] = [
 
 export default function Stats(): JSX.Element {
   return (
-    <section className="bg-white border-y border-[#e0e0de] py-8 " id="stats">
-      <div className="max-w-[1180px] mx-auto px-10 w-full">
+    <section className="bg-white border-y border-[#e0e0de] py-8" id="stats">
+      <div className="max-w-[1180px] mx-auto px-6 md:px-10 w-full">
         <div className="flex flex-col md:flex-row md:items-center justify-between gap-6 w-full">
 
           {/* Left: Label + Heading */}
@@ -34,7 +34,7 @@ export default function Stats(): JSX.Element {
 
               {/* Stats */}
               <div className="flex flex-col gap-1 flex-shrink-0" role="listitem">
-                <span className="text-[1.75rem] font-bold  font-serif text-primary tracking-[-0.04em] leading-none">
+                <span className="text-[1.75rem] font-bold font-serif text-primary tracking-[-0.04em] leading-none">
                   {s.value}
                 </span>
                 <span className="text-[0.75rem] font-urbanist text-slate-gray tracking-[0.03em]">

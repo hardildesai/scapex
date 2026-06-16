@@ -1,7 +1,7 @@
 export default function Globe(): JSX.Element {
   return (
-    <section className="bg-[#0d1b2e] pt-14 pb-6 overflow-hidden relative" id="global-reach">
-      <div className="max-w-[1180px] mx-auto px-10 w-full">
+    <section className="bg-[#0d1b2e] pt-12 md:pt-14 pb-6 overflow-hidden relative" id="global-reach">
+      <div className="max-w-[1180px] mx-auto px-6 md:px-10 w-full">
         <p className="text-[0.63rem] font-semibold tracking-[0.15em] uppercase text-[#6b8aad] mb-5">
           03 / GLOBAL CONNECTIONS
         </p>
