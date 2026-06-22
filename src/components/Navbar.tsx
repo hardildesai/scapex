@@ -43,9 +43,8 @@ export default function Navbar(): JSX.Element {
 
   return (
     <nav
-      className={`fixed top-8 left-0 right-0 z-[90] bg-white/97 border-b border-[#e8e8e8] h-[52px] transition-transform duration-300 ease-in-out ${
-        showNavbar ? 'translate-y-0' : '-translate-y-28'
-      }`}
+      className={`fixed top-8 left-0 right-0 z-[90] bg-white/97 border-b border-[#e8e8e8] h-[52px] transition-transform duration-300 ease-in-out ${showNavbar ? 'translate-y-0' : '-translate-y-28'
+        }`}
       role="navigation"
       aria-label="Main navigation"
     >
@@ -74,12 +73,13 @@ export default function Navbar(): JSX.Element {
 
         {/* Actions */}
         <div className="flex items-center gap-2 ml-40">
-          <button
+          <Link
+            to="/partner"
             className="bg-gold text-black text-[0.73rem] font-mono font-bold  rounded-xl px-4 py-[7px] hover:bg-[#1e4f30] transition-colors duration-200 whitespace-nowrap"
             id="nav-cta-partner"
           >
             Partner With Us
-          </button>
+          </Link>
           <button
             className="p-2 rounded hover:bg-gray-100 transition-colors text-[#555]"
             id="nav-search-btn"

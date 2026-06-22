@@ -4,6 +4,7 @@ import Navbar from './components/Navbar'
 import Hero from './components/Hero'
 import InvestorsPage from './pages/InvestorsPage'
 import SustainabilityPage from './pages/SustainabilityPage'
+import PartnerPage from './pages/PartnerPage'
 import Stats from './components/Stats'
 import Architecture from './components/Architecture'
 import Divisions from './components/Divisions'
@@ -42,6 +43,7 @@ export default function App(): JSX.Element {
         <Route path="/careers" element={<CareersPage />} />
         <Route path="/investors" element={<InvestorsPage />} />
         <Route path="/sustainability" element={<SustainabilityPage />} />
+        <Route path="/partner" element={<PartnerPage />} />
       </Routes>
     </BrowserRouter>
   )
