@@ -1,72 +1,57 @@
-const bullets: string[] = [
-  'Achieve net-zero across all operating divisions by 2035',
-  'Deploy 5 GW of solar capacity with zero-waste manufacturing',
-  'Integrate circular agriculture practices reducing emissions by 60%',
-  'Operate carbon-neutral logistics across 40+ countries',
-]
+import * as React from "react"
 
 export default function Sustainability(): JSX.Element {
   return (
-    <section className="bg-white pt-14 pb-16" id="sustainability">
+    <section className="bg-warm-cream py-16 md:py-24" id="sustainability">
       <div className="max-w-[1180px] mx-auto px-6 md:px-10 w-full">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-16 items-center">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-16 items-center">
 
-          {/* Left: 2×2 photo grid */}
-          <div aria-hidden="true">
-            <div
-              className="grid grid-cols-2 grid-rows-2 gap-2"
-              style={{ height: '300px' }}
-            >
-              <div className="rounded overflow-hidden bg-[#d4dae0]">
-                <img src="/sustainability.png" alt="" className="w-full h-full object-cover block" />
-              </div>
-              <div className="rounded overflow-hidden flex flex-col items-center justify-center gap-2 bg-gradient-to-br from-[#1a6b3c] to-[#2a9d5c]">
-                <span className="text-2xl text-white">♻</span>
-                <p className="text-[0.70rem] font-semibold text-white/90 tracking-wide uppercase text-center px-3">
-                  Sustainable Practices
-                </p>
-              </div>
-              <div className="rounded overflow-hidden bg-[#d4dae0]">
-                <img src="/solar.png" alt="" className="w-full h-full object-cover block" />
-              </div>
-              <div className="rounded overflow-hidden bg-[#d4dae0]">
-                <img src="/agro.png" alt="" className="w-full h-full object-cover block" />
-              </div>
-            </div>
+          {/* Left: Single photo */}
+          <div className="rounded-xl overflow-hidden h-[400px] md:h-[520px]">
+            <img
+              src="/sustainability.png"
+              alt="Sustainability stacking blocks"
+              className="w-full h-full object-cover block"
+            />
           </div>
 
           {/* Right: Text */}
-          <div>
-            <p className="text-[0.63rem] font-semibold tracking-[0.15em] uppercase text-[#888] mb-4">
-              04 / Sustainability
+          <div className="flex flex-col justify-center">
+            <p className="text-[0.7rem] font-bold font-serif tracking-[0.2em] uppercase text-slate-gray mb-5 font-sans">
+              04 / SUSTAINABILITY FIRST
             </p>
             <h2
-              className="font-bold text-[#111] leading-[1.2] tracking-tight mb-5"
-              style={{ fontSize: 'clamp(1.45rem, 2.4vw, 2.0rem)' }}
+              className="font-serif font-bold text-black leading-[1.15] tracking-tight mb-6 text-4xl md:text-5xl"
             >
-              Carbon Neutrality Is The{' '}
-              <em style={{ fontFamily: 'Playfair Display, Georgia, serif', fontStyle: 'italic', color: '#1a5faa' }}>
-                Benchmark
-              </em>
-              .
+              Carbon Neutrality Is The<br />Benchmark.
             </h2>
-            <p className="text-[0.82rem] text-[#666] leading-[1.75] mb-7 max-w-[400px]">
-              We are committed to a future where industrial scale and environmental
-              stewardship are not opposing forces — they are engineered to coexist
-              at every level of our operations.
+            <p className="text-[0.87rem] text-slate-gray leading-[1.8] mb-8 font-urbanist">
+              We aren't just moving products; we're moving the world toward a more
+              sustainable equilibrium. Our agrivoltaic projects allow land to produce
+              both food and energy simultaneously, maximizing resource efficiency.
             </p>
-            <ul className="flex flex-col gap-3 list-none" role="list">
-              {bullets.map((b, i) => (
-                <li key={i} className="flex items-start gap-3 text-[0.80rem] text-[#333] leading-[1.6]">
-                  <span
-                    className="flex-shrink-0 rounded-full bg-[#c8a84b] mt-[5px]"
-                    style={{ width: 7, height: 7 }}
-                    aria-hidden="true"
-                  />
-                  {b}
-                </li>
-              ))}
-            </ul>
+
+            <div className="flex flex-col gap-6 font-sans">
+              {/* Item 1 */}
+              <div>
+                <h3 className="text-[0.95rem] font-bold text-black flex items-center gap-2">
+                  <span className="text-slate-gray/50 font-normal font-mono">01.</span> Regenerative Exports
+                </h3>
+                <p className="text-[0.8rem] text-slate-gray font-urbanist leading-[1.65] pl-8 mt-1">
+                  Working with farmers to implement zero-waste agricultural practices across our entirely supply chain.
+                </p>
+              </div>
+
+              {/* Item 2 */}
+              <div>
+                <h3 className="text-[0.95rem] font-bold text-black flex items-center gap-2">
+                  <span className="text-slate-gray/50 font-normal font-mono">02.</span> Renewable Operations
+                </h3>
+                <p className="text-[0.8rem] text-slate-gray font-urbanist leading-[1.65] pl-8 mt-1">
+                  Targeting 100% renewable energy-usage across all Scapex logistics centers by 2030.
+                </p>
+              </div>
+            </div>
           </div>
 
         </div>
@@ -74,3 +59,4 @@ export default function Sustainability(): JSX.Element {
     </section>
   )
 }
+

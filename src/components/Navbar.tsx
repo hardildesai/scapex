@@ -14,17 +14,17 @@ const navLinks: NavLink[] = [
 ]
 
 export default function Navbar(): JSX.Element {
-  const [showNavbar, setShowNavbar] = useState<boolean>(true)
+  const [isScrolled, setIsScrolled] = useState<boolean>(false)
   const [menuOpen, setMenuOpen] = useState<boolean>(false)
   const location = useLocation()
 
   useEffect(() => {
     const handleScroll = () => {
-      if (window.scrollY === 0) {
-        setShowNavbar(true)
-      } else {
-        setShowNavbar(false)
+      if (window.scrollY > 0) {
+        setIsScrolled(true)
         setMenuOpen(false)
+      } else {
+        setIsScrolled(false)
       }
     }
     window.addEventListener('scroll', handleScroll)
@@ -43,8 +43,9 @@ export default function Navbar(): JSX.Element {
 
   return (
     <nav
-      className={`fixed top-8 left-0 right-0 z-[90] bg-white/97 border-b border-[#e8e8e8] h-[52px] transition-transform duration-300 ease-in-out ${showNavbar ? 'translate-y-0' : '-translate-y-28'
-        }`}
+      className={`fixed left-0 right-0 z-[90] bg-white/97 border-b border-[#e8e8e8] h-[52px] transition-all duration-300 ease-in-out ${
+        isScrolled ? 'top-0' : 'top-8'
+      }`}
       role="navigation"
       aria-label="Main navigation"
     >
@@ -105,7 +106,9 @@ export default function Navbar(): JSX.Element {
       </div>
 
       {/* Mobile Drawer */}
-      <div className={`md:hidden fixed top-[84px] left-0 right-0 bg-white border-b border-[#e8e8e8] z-[89] transition-all duration-300 ${menuOpen ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none -translate-y-2'}`}>
+      <div className={`md:hidden fixed left-0 right-0 bg-white border-b border-[#e8e8e8] z-[89] transition-all duration-300 ${
+        isScrolled ? 'top-[52px]' : 'top-[84px]'
+      } ${menuOpen ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none -translate-y-2'}`}>
         <ul role="list" className="flex flex-col py-3 list-none">
           {navLinks.map((link) => (
             <li key={link.label}>
