@@ -9,19 +9,19 @@ export default function StrategicPillars(): JSX.Element {
 
           {/* Left: Text */}
           <div>
-            <p className='font-urbanist text-[16px] uppercase text-slate-gray'>
+            <p className='font-urbanist text-[0.85rem] uppercase text-slate-gray'>
               Pillars of Sustainability
             </p>
-            <h2 className='font-serif text-[46px] font-bold text-black'>
+            <h2 className='font-serif text-[clamp(2rem,6vw,2.9rem)] font-bold text-black leading-tight mt-1'>
               Strategic Pillars
             </h2>
-            <p className='font-urbanist text-[14px] mt-2 text-slate-gray uppercase'>
+            <p className='font-urbanist text-[0.82rem] mt-2 text-slate-gray uppercase'>
               Our sustainability framework is built on four core commitments — designed not just for compliance, but for pioneering industry standards.
             </p>
           </div>
 
           {/* Right: 2×2 icon grid */}
-          <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', border: '1px solid #d8d8d4', borderRadius: '2px', overflow: 'hidden' }}>
+          <div className="grid grid-cols-2 border border-[#d8d8d4] rounded-[2px] overflow-hidden">
             <PillarCell><Co2Icon /></PillarCell>
             <PillarCell borderLeft><LeafIcon /></PillarCell>
             <PillarCell borderTop><RecycleIcon /></PillarCell>

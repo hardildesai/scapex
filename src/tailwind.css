@@ -84,3 +84,7 @@ body {
   animation: grid-move 8s linear infinite;
 }
 
+/* ── Mobile nav drawer ── */
+.duration-350 {
+  transition-duration: 350ms;
+}

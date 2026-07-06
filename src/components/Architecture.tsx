@@ -9,7 +9,7 @@ export default function Architecture(): JSX.Element {
             <p className="text-[0.75rem] font-serif font-semibold tracking-[0.15em] uppercase text-slate-gray mb-3">
               01 / The Architecture
             </p>
-            <h2 className="text-[2.5rem] font-bold font-bricolage text-black leading-[1.18] tracking-[-0.03em]">
+            <h2 className="text-[clamp(1.6rem,5vw,2.5rem)] font-bold font-bricolage text-black leading-[1.18] tracking-[-0.03em]">
               A{' '}
               <em className="font-serif text-primary">
                 Synchronized

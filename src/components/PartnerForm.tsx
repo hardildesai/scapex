@@ -7,7 +7,7 @@ export default function PartnerForm(): JSX.Element {
       id="partner-form"
       className="bg-white pt-[48px] pb-[64px]"
     >
-      <div className="max-w-[1180px] mx-auto px-10 grid grid-cols-1 md:grid-cols-[380px_1fr] gap-[64px] items-start">
+      <div className="max-w-[1180px] mx-auto px-6 md:px-10 grid grid-cols-1 md:grid-cols-[380px_1fr] gap-[64px] items-start">
 
         {/* ── LEFT: Bordered card ── */}
         <div className="border border-[#d4d4d0] rounded-[2px] py-[44px] px-[36px] bg-white min-h-[380px] flex flex-col justify-start">
@@ -105,10 +105,10 @@ export default function PartnerForm(): JSX.Element {
           </div>
 
           {/* Submit Button */}
-          <div className="flex justify-end mt-2">
+          <div className="flex justify-end md:justify-end mt-2">
             <button
               type="submit"
-              className="bg-deep-navy text-white text-[0.72rem] font-mono font-bold tracking-[0.16em] uppercase py-3.5 px-10 hover:bg-[#1a3a6a] transition-colors duration-200"
+              className="w-full md:w-auto bg-deep-navy text-white text-[0.72rem] font-mono font-bold tracking-[0.16em] uppercase py-3.5 px-10 hover:bg-[#1a3a6a] transition-colors duration-200"
             >
               GET A QUOTE
             </button>

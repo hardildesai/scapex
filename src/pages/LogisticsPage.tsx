@@ -9,9 +9,84 @@ const NAVY = '#0d1b2e'
 const FF_SANS = 'Inter, ui-sans-serif, system-ui, sans-serif'
 const FF_SERIF = 'Playfair Display, Georgia, serif'
 
+const LOGISTICS_MOBILE_CSS = `
+@media (max-width: 768px) {
+  /* ── Hero ── */
+  #logistics-hero > div {
+    grid-template-columns: 1fr !important;
+    padding: 0 20px !important;
+    min-height: unset !important;
+  }
+  #logistics-hero > div > div:first-child {
+    padding: 40px 0 32px !important;
+  }
+  #logistics-hero > div > div:last-child {
+    display: none !important;
+  }
+
+  /* ── Stats bar ── */
+  #stats-bar > div {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 20px 12px !important;
+    padding: 0 20px !important;
+  }
+  #stats-bar > div > div {
+    border-right: none !important;
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+    padding-bottom: 16px;
+  }
+
+  /* ── Integrated logistics ── */
+  #integrated-logistics > div {
+    grid-template-columns: 1fr !important;
+    gap: 32px !important;
+    padding: 0 20px !important;
+  }
+  #integrated-logistics { padding: 48px 0 !important; }
+
+  /* ── Sea freight ── */
+  #sea-freight > div { padding: 0 20px !important; }
+  #sea-freight > div > div:last-child {
+    grid-template-columns: 1fr !important;
+  }
+  #sea-freight { padding: 48px 0 !important; }
+
+  /* ── Air freight ── */
+  #air-freight > div {
+    grid-template-columns: 1fr !important;
+    gap: 32px !important;
+    padding: 0 20px !important;
+  }
+  #air-freight { padding: 48px 0 !important; }
+
+  /* ── Customs compliance ── */
+  #customs-compliance > div > div:last-child {
+    grid-template-columns: 1fr !important;
+    gap: 16px !important;
+  }
+  #customs-compliance > div > div:last-child > div:last-child > div:last-child {
+    grid-template-columns: 1fr !important;
+  }
+  #customs-compliance > div { padding: 0 20px !important; }
+  #customs-compliance { padding: 48px 0 !important; }
+
+  /* ── Contact form ── */
+  #contact-form > div {
+    grid-template-columns: 1fr !important;
+    gap: 36px !important;
+    padding: 0 20px !important;
+  }
+  #contact-form { padding: 48px 0 !important; }
+  #contact-form .lp-form-row {
+    grid-template-columns: 1fr !important;
+  }
+}
+`
+
 export default function LogisticsPage(): JSX.Element {
   return (
     <>
+      <style>{LOGISTICS_MOBILE_CSS}</style>
       <AnnouncementBar />
       <Navbar />
       <main>
@@ -604,7 +679,7 @@ function ContactForm(): JSX.Element {
           <form onSubmit={(e) => e.preventDefault()} style={{ display: 'flex', flexDirection: 'column', gap: '28px' }}>
 
             {/* Row 1: Full Name | Company Email */}
-            <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '24px' }}>
+            <div className="lp-form-row" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '24px' }}>
               <div>
                 <label htmlFor="cf-full-name" style={labelStyle}>Full Name</label>
                 <input id="cf-full-name" type="text" style={inputStyle}
@@ -618,7 +693,7 @@ function ContactForm(): JSX.Element {
             </div>
 
             {/* Row 2: Service Required | Estimated Volume */}
-            <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '24px' }}>
+            <div className="lp-form-row" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '24px' }}>
               <div>
                 <label htmlFor="cf-service" style={labelStyle}>Service Required</label>
                 <input id="cf-service" type="text" placeholder="Sea / Air / Customs"

@@ -8,7 +8,7 @@ export default function Divisions(): JSX.Element {
           <p className="text-[0.7rem] font-serif font-bold tracking-[0.2em] uppercase text-slate-gray mb-3">
             02 / Core Divisions
           </p>
-          <h2 className="text-[2.6rem] font-bold font-bricolage text-black leading-[1.2] tracking-[-0.01em] max-w-[850px]">
+          <h2 className="text-[clamp(1.6rem,5vw,2.6rem)] font-bold font-bricolage text-black leading-[1.2] tracking-[-0.01em] max-w-[850px]">
             Achieving Outstanding Performance Across All Divisions
           </h2>
         </div>

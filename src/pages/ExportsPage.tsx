@@ -9,9 +9,90 @@ const NAVY = '#0d1b2e'
 const FF_SANS = 'Inter, ui-sans-serif, system-ui, sans-serif'
 const FF_SERIF = 'Playfair Display, Georgia, serif'
 
+const EXPORTS_MOBILE_CSS = `
+@media (max-width: 768px) {
+  /* ── Hero: stack vertically, hide right image ── */
+  #exports-hero {
+    grid-template-columns: 1fr !important;
+    min-height: unset !important;
+  }
+  #exports-hero > div:first-child {
+    padding: 40px 20px 36px !important;
+  }
+  #exports-hero > div:last-child {
+    display: none !important;
+  }
+
+  /* ── Stats: 2x2 grid ── */
+  #exports-stats > div {
+    grid-template-columns: repeat(2, 1fr) !important;
+    padding: 0 20px !important;
+    gap: 20px 12px !important;
+  }
+  #exports-stats > div > div {
+    border-right: none !important;
+    padding-bottom: 12px;
+    border-bottom: 1px solid rgba(200,168,75,0.12);
+  }
+
+  /* ── Global Stewardship ── */
+  #global-stewardship > div {
+    grid-template-columns: 1fr !important;
+    gap: 32px !important;
+    padding: 0 20px !important;
+  }
+  #global-stewardship { padding: 48px 0 !important; }
+
+  /* ── Product Portfolio ── */
+  #product-portfolio > div { padding: 0 20px !important; }
+  #product-portfolio > div > div:last-child {
+    grid-template-columns: 1fr !important;
+    grid-template-rows: auto !important;
+  }
+  #product-portfolio > div > div:last-child > div:first-child {
+    grid-row: unset !important;
+  }
+  #product-portfolio { padding: 48px 0 !important; }
+
+  /* ── Compliance: 2x2 ── */
+  #compliance-certs > div { padding: 0 20px !important; }
+  #compliance-certs > div > div:last-child {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+  #compliance-certs { padding: 48px 0 !important; }
+
+  /* ── Trade Excellence ── */
+  #trade-excellence > div {
+    grid-template-columns: 1fr !important;
+    gap: 32px !important;
+    padding: 0 20px !important;
+  }
+  #trade-excellence { padding: 48px 0 !important; }
+
+  /* ── Sustainability Commitment ── */
+  #sustainability-commitment > div { padding: 0 20px !important; }
+  #sustainability-commitment > div > div:last-child {
+    grid-template-columns: 1fr !important;
+  }
+  #sustainability-commitment { padding: 48px 0 !important; }
+
+  /* ── Sourcing Form ── */
+  #sourcing-form > div { padding: 0 20px !important; }
+  #sourcing-form > div > div:last-child {
+    grid-template-columns: 1fr !important;
+    gap: 32px !important;
+  }
+  #sourcing-form { padding: 48px 0 !important; }
+  .ep-form-row {
+    grid-template-columns: 1fr !important;
+  }
+}
+`
+
 export default function ExportsPage(): JSX.Element {
   return (
     <>
+      <style>{EXPORTS_MOBILE_CSS}</style>
       <AnnouncementBar />
       <Navbar />
       <main>
@@ -476,7 +557,7 @@ function SecuringSourcing(): JSX.Element {
           {/* RIGHT: Form */}
           <form onSubmit={(e) => e.preventDefault()} style={{ display: 'flex', flexDirection: 'column', gap: '24px' }}>
 
-            <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '20px' }}>
+            <div className="ep-form-row" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '20px' }}>
               <div>
                 <label htmlFor="sf-full-name" style={labelStyle}>Full Name</label>
                 <input id="sf-full-name" type="text" style={inputStyle} value={form.fullName} onChange={e => setForm({...form, fullName: e.target.value})} />
@@ -487,7 +568,7 @@ function SecuringSourcing(): JSX.Element {
               </div>
             </div>
 
-            <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '20px' }}>
+            <div className="ep-form-row" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '20px' }}>
               <div>
                 <label htmlFor="sf-trade-route" style={labelStyle}>Trade Route</label>
                 <input id="sf-trade-route" type="text" placeholder="Origin → Destination" style={inputStyle} value={form.tradeRoute} onChange={e => setForm({...form, tradeRoute: e.target.value})} />

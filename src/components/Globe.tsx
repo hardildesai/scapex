@@ -53,7 +53,7 @@ export default function Globe(): JSX.Element {
           03 / GLOBAL CONNECTIONS
         </p>
         <h2
-          className="font-serif font-bold text-gold font-bricolage leading-[1.15] tracking-tight max-w-[600px] mb-0 whitespace-nowrap"
+          className="font-serif font-bold text-gold font-bricolage leading-[1.15] tracking-tight max-w-[600px] mb-0"
           style={{ fontSize: 'clamp(1.8rem, 3vw, 2.6rem)' }}
         >
           Bridging Continents with Precision

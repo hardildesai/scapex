@@ -33,7 +33,7 @@ export default function FinancialPerformance(): JSX.Element {
   return (
     <section className="bg-white py-12 md:py-16" id="financial-performance">
       <div className="max-w-[1180px] mx-auto px-6 md:px-10">
-        <div className="flex items-center justify-between mb-8">
+        <div className="flex flex-wrap items-center justify-between gap-3 mb-8">
           <h2 className="font-serif text-[clamp(1.2rem,3vw,1.55rem)] font-bold text-[#111] tracking-[-0.02em]">Financial Performance</h2>
           <a href="#metrics" className="border border-[#c0c0bc] bg-transparent text-[#444] font-sans text-[0.68rem] font-medium tracking-[0.04em] px-4 py-2 rounded-[2px] no-underline whitespace-nowrap">View Full Metrics</a>
         </div>

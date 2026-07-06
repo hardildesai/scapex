@@ -11,7 +11,7 @@ export default function PartnerHero(): JSX.Element {
         aria-hidden="true"
       />
 
-      <div className="relative z-10 grid grid-cols-1 md:grid-cols-2 gap-[48px] items-start pt-8 pb-12 md:pt-[124px] md:pb-16 max-w-[1180px] mx-auto px-6 md:px-10">
+      <div className="relative z-10 grid grid-cols-1 md:grid-cols-2 gap-[48px] items-start pt-24 pb-12 md:pt-[124px] md:pb-16 max-w-[1180px] mx-auto px-6 md:px-10">
 
         {/* ── Left: Content ── */}
         <div className="pt-5 relative z-10">
@@ -23,7 +23,7 @@ export default function PartnerHero(): JSX.Element {
           </div>
 
           {/* Heading — matching Hero.tsx style */}
-          <h1 className="font-extrabold font-bricolage text-7xl leading-[1.06] text-black tracking-[-0.04em] mb-6">
+          <h1 className="font-extrabold font-bricolage text-[clamp(2.4rem,8vw,4.5rem)] leading-[1.06] text-black tracking-[-0.04em] mb-6">
             Partnering With<br />
             <em className="italic font-bold text-primary font-serif" style={{ fontFamily: 'Playfair Display, Georgia, serif', fontStyle: 'italic' }}>
               Global
