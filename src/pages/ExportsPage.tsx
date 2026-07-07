@@ -9,22 +9,36 @@ import ComplianceCerts from '../components/ComplianceCerts'
 import TradeExcellence from '../components/TradeExcellence'
 import SustainabilityCommitment from '../components/SustainabilityCommitment'
 import SecuringSourcing from '../components/SecuringSourcing'
+import ScrollReveal from '../components/ScrollReveal'
 
 export default function ExportsPage(): JSX.Element {
   return (
     <>
-      <style>{EXPORTS_MOBILE_CSS}</style>
       <AnnouncementBar />
       <Navbar />
-      <main>
-        <ExportsHero />
-        <ExportsStats />
-        <GlobalStewardship />
-        <ProductPortfolio />
-        <ComplianceCerts />
-        <TradeExcellence />
-        <SustainabilityCommitment />
-        <SecuringSourcing />
+      <main className="overflow-hidden">
+        <ScrollReveal>
+          <ExportsHero />
+          <ExportsStats />
+        </ScrollReveal>
+        <ScrollReveal>
+          <GlobalStewardship />
+        </ScrollReveal>
+        <ScrollReveal>
+          <ProductPortfolio />
+        </ScrollReveal>
+        <ScrollReveal>
+          <ComplianceCerts />
+        </ScrollReveal>
+        <ScrollReveal>
+          <TradeExcellence />
+        </ScrollReveal>
+        <ScrollReveal>
+          <SustainabilityCommitment />
+        </ScrollReveal>
+        <ScrollReveal>
+          <SecuringSourcing />
+        </ScrollReveal>
       </main>
       <Footer />
     </>

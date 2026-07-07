@@ -1,27 +1,27 @@
-import { GOLD, NAVY, FF_SANS } from './LogisticsConstants'
-
 function AirFeature({ title, text }: { title: string; text: string }): JSX.Element {
   return (
-    <div style={{ borderLeft: `2px solid ${GOLD}`, paddingLeft: '16px' }}>
-      <div style={{ fontFamily: FF_SANS, fontSize: '0.82rem', fontWeight: 700, color: '#111', marginBottom: '5px' }}>{title}</div>
-      <div style={{ fontFamily: FF_SANS, fontSize: '0.68rem', color: '#666', lineHeight: 1.7 }}>{text}</div>
+    <div className="border-l-2 border-[#c8a84b] pl-4">
+      <div className="font-urbanist text-[0.82rem] font-bold text-[#111] mb-1">{title}</div>
+      <div className="font-urbanist text-[0.70rem] text-[#666] leading-[1.7]">{text}</div>
     </div>
   )
 }
 
 export default function AirFreight(): JSX.Element {
   return (
-    <section style={{ background: '#e8eef6', padding: '72px 0' }} id="air-freight">
-      <div style={{ maxWidth: 1180, margin: '0 auto', padding: '0 40px', display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '64px', alignItems: 'center' }}>
+    <section className="bg-ice-blue py-[72px]" id="air-freight">
+      <div className="max-w-[1180px] mx-auto px-10 grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
 
         {/* LEFT: Features */}
         <div>
-          <p style={{ fontFamily: FF_SANS, fontSize: '0.56rem', fontWeight: 700, letterSpacing: '0.18em', textTransform: 'uppercase', color: GOLD, marginBottom: '8px' }}>Global Airfreight</p>
-          <h2 style={{ fontFamily: FF_SANS, fontSize: 'clamp(1.8rem, 3vw, 2.5rem)', fontWeight: 800, color: '#111', letterSpacing: '-0.04em', lineHeight: 1.05, marginBottom: '36px' }}>
+          <p className="font-urbanist text-[0.70rem] font-bold tracking-[0.18em] uppercase text-[#c8a84b] mb-2">
+            Global Airfreight
+          </p>
+          <h2 className="font-serif text-[clamp(1.8rem,3vw,2.5rem)] font-bold text-[#111] tracking-tight leading-[1.05] mb-9">
             Premium Air Freight
           </h2>
 
-          <div style={{ display: 'flex', flexDirection: 'column', gap: '28px' }}>
+          <div className="flex flex-col gap-7">
             <AirFeature
               title="Express Airfreight"
               text="Time-critical shipments transported via priority boarding on passenger and dedicated cargo carriers with next-flight-out capabilities."
@@ -38,16 +38,16 @@ export default function AirFreight(): JSX.Element {
         </div>
 
         {/* RIGHT: Aircraft image with branding card */}
-        <div style={{ position: 'relative' }}>
+        <div className="relative">
           <img
             src="/logistics-air.png"
             alt="Scapex cargo aircraft"
-            style={{ width: '100%', aspectRatio: '4/3', objectFit: 'cover', display: 'block', borderRadius: '2px' }}
+            className="w-full aspect-[4/3] object-cover block rounded-[2px]"
           />
           {/* Branded overlay card */}
-          <div style={{ position: 'absolute', bottom: '20px', left: '20px', background: NAVY, color: '#fff', padding: '14px 18px', borderRadius: '2px' }}>
-            <div style={{ fontFamily: FF_SANS, fontSize: '1.0rem', fontWeight: 800, color: '#fff', letterSpacing: '-0.02em' }}>Scapex</div>
-            <div style={{ fontFamily: FF_SANS, fontSize: '0.55rem', color: 'rgba(255,255,255,0.6)', letterSpacing: '0.10em', textTransform: 'uppercase', marginTop: '2px' }}>Air Cargo Division</div>
+          <div className="absolute bottom-5 left-5 bg-[#0d1b2e] text-white py-[14px] px-[18px] rounded-[2px] shadow-md">
+            <div className="font-sans text-[1.0rem] font-bold text-white tracking-tight">Scapex</div>
+            <div className="font-sans text-[0.55rem] text-white/60 tracking-[0.10em] uppercase mt-0.5">Air Cargo Division</div>
           </div>
         </div>
       </div>

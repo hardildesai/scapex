@@ -63,7 +63,7 @@ export default function Footer(): JSX.Element {
                     <li key={l.label}>
                       <a
                         href={l.href}
-                        className="text-[0.74rem] text-[#8aaac4] transition-colors duration-200 tracking-wide hover:text-white"
+                        className="text-[0.74rem] font-mono text-[#8aaac4] transition-colors duration-200 tracking-wide hover:text-white"
                       >
                         {l.label}
                       </a>
@@ -84,10 +84,10 @@ export default function Footer(): JSX.Element {
             © {new Date().getFullYear()} Scapex Group. All rights reserved.
           </p>
           <div className="flex gap-6">
-            <a href="#privacy" className="text-[0.67rem] text-[#4a6a88] transition-colors duration-200 hover:text-[#8aaac4]">
+            <a href="#privacy" className="font-mono text-[0.67rem] text-[#4a6a88] transition-colors duration-200 hover:text-[#8aaac4]">
               Privacy Policy
             </a>
-            <a href="#terms" className="text-[0.67rem] text-[#4a6a88] transition-colors duration-200 hover:text-[#8aaac4]">
+            <a href="#terms" className="font-mono text-[0.67rem] text-[#4a6a88] transition-colors duration-200 hover:text-[#8aaac4]">
               Terms of Use
             </a>
           </div>

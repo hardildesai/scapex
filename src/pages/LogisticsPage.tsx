@@ -8,21 +8,33 @@ import SeaFreight from '../components/SeaFreight'
 import AirFreight from '../components/AirFreight'
 import CustomsCompliance from '../components/CustomsCompliance'
 import LogisticsContactForm from '../components/LogisticsContactForm'
+import ScrollReveal from '../components/ScrollReveal'
 
 export default function LogisticsPage(): JSX.Element {
   return (
     <>
-      <style>{LOGISTICS_MOBILE_CSS}</style>
       <AnnouncementBar />
       <Navbar />
-      <main>
-        <LogisticsHero />
-        <StatsBar />
-        <IntegratedLogistics />
-        <SeaFreight />
-        <AirFreight />
-        <CustomsCompliance />
-        <LogisticsContactForm />
+      <main className="overflow-hidden">
+        <ScrollReveal>
+          <LogisticsHero />
+          <StatsBar />
+        </ScrollReveal>
+        <ScrollReveal>
+          <IntegratedLogistics />
+        </ScrollReveal>
+        <ScrollReveal>
+          <SeaFreight />
+        </ScrollReveal>
+        <ScrollReveal>
+          <AirFreight />
+        </ScrollReveal>
+        <ScrollReveal>
+          <CustomsCompliance />
+        </ScrollReveal>
+        <ScrollReveal>
+          <LogisticsContactForm />
+        </ScrollReveal>
       </main>
       <Footer />
     </>
