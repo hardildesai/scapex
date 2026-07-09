@@ -73,7 +73,7 @@ export default function SeaFreight(): JSX.Element {
 
   return (
     <section className="bg-white py-20" id="sea-freight">
-      <div className="max-w-[1180px] mx-auto px-10">
+      <div className="max-w-[1180px] mx-auto px-6 md:px-10">
         <p className="font-urbanist text-[0.70rem] font-bold text-slate-500 tracking-[0.18em] uppercase mb-2">
           Maritime Excellence
         </p>

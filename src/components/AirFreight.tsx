@@ -10,7 +10,7 @@ function AirFeature({ title, text }: { title: string; text: string }): JSX.Eleme
 export default function AirFreight(): JSX.Element {
   return (
     <section className="bg-ice-blue py-[72px]" id="air-freight">
-      <div className="max-w-[1180px] mx-auto px-10 grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
+      <div className="max-w-[1180px] mx-auto px-6 md:px-10 grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-16 items-center">
 
         {/* LEFT: Features */}
         <div>

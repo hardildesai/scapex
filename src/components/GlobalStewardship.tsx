@@ -2,7 +2,7 @@ export default function GlobalStewardship(): JSX.Element {
   return (
     <section
       id="global-stewardship"
-      className="bg-warm-cream pt-32 pb-20 px-6 md:px-12 relative z-10"
+      className="bg-warm-cream pt-20 md:pt-32 pb-20 px-6 md:px-12 relative z-10"
     >
       <div className="max-w-[1180px] mx-auto grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-16 items-stretch">
 

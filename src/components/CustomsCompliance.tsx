@@ -1,7 +1,7 @@
 export default function CustomsCompliance(): JSX.Element {
   return (
     <section className="bg-white py-[72px]" id="customs-compliance">
-      <div className="max-w-[1180px] mx-auto px-10">
+      <div className="max-w-[1180px] mx-auto px-6 md:px-10">
 
         {/* Centered heading */}
         <div className="text-center mb-11">

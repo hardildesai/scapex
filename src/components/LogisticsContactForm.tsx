@@ -7,7 +7,7 @@ export default function LogisticsContactForm(): JSX.Element {
 
   return (
     <section id="contact-form" className="bg-[#0d1b2e] py-[72px]">
-      <div className="max-w-[1180px] mx-auto px-10 grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
+      <div className="max-w-[1180px] mx-auto px-6 md:px-10 grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-16 items-center">
 
         {/* ── LEFT: Heading + contact info ── */}
         <div>

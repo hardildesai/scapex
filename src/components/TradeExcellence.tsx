@@ -41,7 +41,7 @@ export default function TradeExcellence(): JSX.Element {
         </div>
 
         {/* RIGHT: Logistics Card */}
-        <div className="bg-[#0d1b2e] border border-white/5 shadow-2xl rounded-2xl p-8 md:p-10 max-w-md w-full ml-auto">
+        <div className="bg-[#0d1b2e] border border-white/5 shadow-2xl rounded-2xl p-8 md:p-10 w-full">
 
           <h3 className="font-serif text-3xl font-bold text-[#c8a84b] leading-tight mb-8">
             Direct Market<br />Logistics

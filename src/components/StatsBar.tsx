@@ -84,14 +84,14 @@ export default function StatsBar(): JSX.Element {
   ]
 
   return (
-    <section style={{ background: '#111827', padding: '28px 0' }} id="stats-bar">
-      <div style={{ maxWidth: 1180, margin: '0 auto', padding: '0 40px', display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: '16px' }}>
+    <section className="bg-[#111827] py-7" id="stats-bar">
+      <div className="max-w-[1180px] mx-auto px-6 md:px-10 grid grid-cols-2 md:grid-cols-4 gap-y-6 gap-x-4">
         {stats.map((s) => (
-          <div key={s.label} style={{ textAlign: 'center', borderRight: '1px solid rgba(255,255,255,0.08)' }}>
-            <div style={{ fontFamily: FF_SANS, fontSize: '2.0rem', fontWeight: 800, color: '#fff', letterSpacing: '-0.04em', lineHeight: 1 }}>
+          <div key={s.label} className="text-center">
+            <div className="text-[1.8rem] md:text-[2.0rem] font-extrabold text-white tracking-[-0.04em] leading-none">
               <AnimatedNumber value={s.value} />
             </div>
-            <div style={{ fontFamily: FF_SANS, fontSize: '0.56rem', fontWeight: 600, color: 'rgba(255,255,255,0.45)', letterSpacing: '0.14em', textTransform: 'uppercase', marginTop: '6px' }}>
+            <div className="text-[0.56rem] font-semibold text-white/45 tracking-[0.14em] uppercase mt-1.5">
               {s.label}
             </div>
           </div>

@@ -82,10 +82,10 @@ export default function ExportsHero(): JSX.Element {
 
             {/* Heading */}
             <h1 className="font-bricolage font-bold tracking-tight leading-[1.08] mb-8 text-left">
-              <span className="block text-[clamp(2.0rem,4.5vw,3.6rem)] text-white whitespace-nowrap">
+              <span className="block text-[clamp(1.8rem,4.5vw,3.6rem)] text-white">
                 Premium Agro Commodities
               </span>
-              <span className="block text-[clamp(2.0rem,4.5vw,3.6rem)] text-white">
+              <span className="block text-[clamp(1.8rem,4.5vw,3.6rem)] text-white">
                 From{' '}
                 <span className="font-serif italic font-semibold text-[#c8a84b]">
                   India's Heartlands
@@ -115,8 +115,8 @@ export default function ExportsHero(): JSX.Element {
           </div>
 
           {/* Right Column: Description overlay */}
-          <div className="lg:col-span-5 flex justify-end items-end">
-            <p className="text-right translate-y-30 max-w-[500px] ml-auto text-[0.68rem] md:text-[1rem] tracking-[0.06em] font-urbanist font-semibold text-white/95 leading-relaxed [text-shadow:0_2px_4px_rgba(0,0,0,0.6)]">
+          <div className="hidden lg:flex justify-end items-end">
+            <p className="text-right max-w-[500px] ml-auto text-[0.68rem] md:text-[1rem] tracking-[0.06em] font-urbanist font-semibold text-white/95 leading-relaxed [text-shadow:0_2px_4px_rgba(0,0,0,0.6)]">
               SCAPEX EXPORTS BRIDGES THE FARM-TO-FORK JOURNEY WITH UNWAVERING QUALITY, PRECISION-DRIVEN PROCESSING, AND BLOCKCHAIN-BASED TRANSPARENCY.
             </p>
           </div>

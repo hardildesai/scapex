@@ -20,7 +20,7 @@ function HexFeature({ title, text }: { title: string; text: string }): JSX.Eleme
 export default function IntegratedLogistics(): JSX.Element {
   return (
     <section className="bg-warm-cream py-20" id="integrated-logistics">
-      <div className="max-w-[1180px] mx-auto px-10 grid grid-cols-1 md:grid-cols-[45%_55%] gap-16 items-start">
+      <div className="max-w-[1180px] mx-auto px-6 md:px-10 grid grid-cols-1 md:grid-cols-[45%_55%] gap-12 md:gap-16 items-start">
 
         {/* LEFT: Image with floating overlapping amber badge */}
         <div className="relative pb-8 pr-8 w-full max-w-[420px] mx-auto md:mx-0">
@@ -38,7 +38,7 @@ export default function IntegratedLogistics(): JSX.Element {
 
         {/* RIGHT: Text content */}
         <div className="pt-2">
-          <h2 className="font-serif  text-[3rem] font-extrabold text-[#111] tracking-[-0.04em] leading-[1.08] mb-5">
+          <h2 className="font-serif text-[clamp(1.8rem,4vw,3rem)] font-extrabold text-[#111] tracking-[-0.04em] leading-[1.08] mb-5">
             Integrated Logistics For A New Era.
           </h2>
 
