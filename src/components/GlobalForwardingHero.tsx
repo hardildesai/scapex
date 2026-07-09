@@ -36,16 +36,16 @@ export default function LogisticsHero(): JSX.Element {
               <a
                 href="#contact-form"
                 id="logistics-quote-btn"
-                className="inline-block bg-[#0d1b2e] text-white font-mono text-[0.68rem] font-bold tracking-[0.08em] uppercase py-3 px-6 rounded-lg text-decoration-none transition-colors duration-200 hover:bg-[#11243b] no-underline"
+                className="inline-block bg-[#0d1b2e] text-white font-mono text-[0.68rem] font-bold tracking-[0.08em] uppercase py-3.5 px-6 rounded-none text-decoration-none transition-colors duration-200 hover:bg-[#11243b] no-underline"
               >
-                Get a Quote
+                GET A QUOTE
               </a>
               <a
-                href="#sea-freight"
+                href="#freight-corridors"
                 id="logistics-track-btn"
-                className="inline-block bg-white text-[#0d1b2e] font-mono text-[0.68rem] font-bold tracking-[0.08em] uppercase py-3 px-[22px] rounded-lg border-[1.5px] border-[#0d1b2e] text-decoration-none transition-colors duration-200 hover:bg-gray-50 no-underline"
+                className="inline-block bg-white text-[#0d1b2e] font-mono text-[0.68rem] font-bold tracking-[0.08em] uppercase py-3.5 px-[22px] rounded-none border-[1.5px] border-[#0d1b2e] text-decoration-none transition-colors duration-200 hover:bg-gray-50 no-underline"
               >
-                View Solutions
+                VIEW DIRECT CORRIDORS
               </a>
             </div>
 
