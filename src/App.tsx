@@ -1,4 +1,5 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import Preloader from './components/Preloader'
 import AnnouncementBar from './components/AnnouncementBar'
 import Navbar from './components/Navbar'
 import Hero from './components/Hero'
@@ -40,6 +41,7 @@ function HomePage(): JSX.Element {
 export default function App(): JSX.Element {
   return (
     <BrowserRouter>
+      <Preloader />
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/careers" element={<CareersPage />} />
