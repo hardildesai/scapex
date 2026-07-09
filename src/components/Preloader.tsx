@@ -37,8 +37,8 @@ export default function Preloader(): JSX.Element | null {
 
   return (
     <div
-      className={`fixed inset-0 z-[9999] flex flex-col items-center justify-center bg-[#fcfbf9] transition-transform duration-[800ms] ease-[cubic-bezier(0.85,0,0.15,1)] ${
-        fadeOut ? '-translate-y-full pointer-events-none' : 'translate-y-0'
+      className={`fixed inset-0 z-[9999] flex flex-col items-center justify-center bg-[#fcfbf9] transition-all duration-[800ms] ease-[cubic-bezier(0.25,1,0.5,1)] ${
+        fadeOut ? 'opacity-0 scale-[1.03] pointer-events-none' : 'opacity-100 scale-100'
       }`}
     >
       {/* Ambient warm light glow */}
