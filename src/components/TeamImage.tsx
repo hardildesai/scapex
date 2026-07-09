@@ -16,7 +16,7 @@ export default function TeamImage(): JSX.Element {
             {/* Inner passpartout border */}
             <div className="overflow-hidden border border-[#F5A31C]/[0.2]">
               <img
-                src="/careers-team.png"
+                src="/careers-team.webp"
                 alt="Scapex team collaborating on-site"
                 className="w-full h-full object-cover object-center block transition-transform duration-700 hover:scale-[1.03] ease-out"
                 style={{ height: 'clamp(280px, 45vw, 550px)' }}

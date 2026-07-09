@@ -25,7 +25,7 @@ export default function IntegratedLogistics(): JSX.Element {
         {/* LEFT: Image with floating overlapping amber badge */}
         <div className="relative pb-8 pr-8 w-full max-w-[420px] mx-auto md:mx-0">
           <img
-            src="/logistics-aircraft.png"
+            src="/logistics-aircraft.webp"
             alt="Scapex cargo aircraft at sunset"
             className="w-[100%] aspect-square object-cover rounded-[2px] shadow-sm block"
           />

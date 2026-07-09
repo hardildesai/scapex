@@ -62,7 +62,7 @@ export default function LogisticsHero(): JSX.Element {
         {/* RIGHT: Hero image */}
         <div className="relative w-full h-[400px] md:h-full logistics-hero-right">
           <img
-            src="/logistics-hero.png"
+            src="/logistics-hero.webp"
             alt="Cargo ship and aircraft logistics"
             className="absolute inset-0 w-full h-full object-cover object-center"
           />

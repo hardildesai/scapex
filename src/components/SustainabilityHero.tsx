@@ -10,7 +10,7 @@ export default function SustainabilityHero(): JSX.Element {
     >
       {/* Background Image using native img tag with absolute inline styling to prevent stretching */}
       <img
-        src="/sus-hero.png"
+        src="/sus-hero.webp"
         alt="Green plant growing on solar panel"
         style={{
           position: 'absolute',

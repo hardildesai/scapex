@@ -26,7 +26,7 @@ export default function ProductPortfolio(): JSX.Element {
           <div className="md:row-span-2 relative overflow-hidden rounded-sm group min-h-[480px] flex flex-col justify-end p-6 md:p-8">
             {/* Background Image */}
             <img
-              src="/exports-spices.png"
+              src="/exports-spices.webp"
               alt="Premium spices layout"
               className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105"
             />
@@ -54,7 +54,7 @@ export default function ProductPortfolio(): JSX.Element {
           <div className="md:col-span-2 relative overflow-hidden rounded-sm group min-h-[230px] flex flex-col justify-end p-6 md:p-8">
             {/* Background Image */}
             <img
-              src="/exports-grains.png"
+              src="/exports-grains.webp"
               alt="Premium basmati rice bowl"
               className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105"
             />
@@ -82,7 +82,7 @@ export default function ProductPortfolio(): JSX.Element {
           <div className="relative overflow-hidden rounded-sm group min-h-[230px] flex flex-col justify-end p-6 md:p-8">
             {/* Background Image */}
             <img
-              src="/exports-fruits-veg.png"
+              src="/exports-fruits-veg.webp"
               alt="Fresh mangoes and onions layout"
               className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105"
             />
@@ -107,7 +107,7 @@ export default function ProductPortfolio(): JSX.Element {
           <div className="relative overflow-hidden rounded-sm group min-h-[230px] flex flex-col justify-end p-6 md:p-8">
             {/* Background Image */}
             <img
-              src="/exports-value-added.png"
+              src="/exports-value-added.webp"
               alt="Value-added supplement jars"
               className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105"
             />

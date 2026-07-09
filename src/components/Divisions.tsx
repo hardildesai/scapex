@@ -18,7 +18,7 @@ export default function Divisions(): JSX.Element {
 
           {/* Left: Large solar card */}
           <article className="relative overflow-hidden bg-[#c8c8c8] h-[360px] md:h-full" id="division-solar">
-            <img src="/solar.png" alt="Solar & Renewable Infrastructure" className="absolute inset-0 w-full h-full object-cover" />
+            <img src="/solar.webp" alt="Solar & Renewable Infrastructure" className="absolute inset-0 w-full h-full object-cover" />
             <div className="absolute inset-0 bg-gradient-to-t from-black/75 via-black/20 to-transparent flex items-end p-8">
               <h3 className="text-[1.85rem] md:text-[2.3rem] font-serif font-medium text-white leading-[1.1] tracking-tight">
                 Solar &amp; Renewable<br />Infrastructure
@@ -29,13 +29,13 @@ export default function Divisions(): JSX.Element {
           {/* Right: Two stacked cards */}
           <div className="flex flex-col md:grid md:grid-rows-2 gap-4 md:h-full">
             <article className="relative overflow-hidden bg-[#c8c8c8] h-[220px] md:h-full" id="division-agro">
-              <img src="/agro.png" alt="Agro Commodities" className="absolute inset-0 w-full h-full object-cover" />
+              <img src="/agro.webp" alt="Agro Commodities" className="absolute inset-0 w-full h-full object-cover" />
               <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/5 to-transparent flex items-start p-8">
                 <h3 className="text-[1.35rem] md:text-[1.5rem] font-serif font-medium text-white tracking-tight">Agro Commodities</h3>
               </div>
             </article>
             <article className="relative overflow-hidden bg-[#0f1e35] h-[220px] md:h-full" id="division-logistics">
-              <img src="/export.png" alt="Export & Logistics" className="absolute inset-0 w-full h-full object-cover" />
+              <img src="/export.webp" alt="Export & Logistics" className="absolute inset-0 w-full h-full object-cover" />
               <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/5 to-transparent flex items-end p-8">
                 <h3 className="text-[1.35rem] md:text-[1.5rem] font-serif font-medium text-white tracking-tight">Export &amp; Logistics</h3>
               </div>

@@ -51,7 +51,7 @@ export default function CareersHero(): JSX.Element {
 
         {/* Worker image - positioned at the absolute bottom of the centered max-w container */}
         <div className="hidden md:block absolute bottom-0 right-6 md:right-[-60px] z-10 w-[265%] max-w-[1050px]">
-          <img src="/careers-hero.png" alt="Scapex professional in safety vest" className="w-full h-auto block scale-x-[-1]" />
+          <img src="/careers-hero.webp" alt="Scapex professional in safety vest" className="w-full h-auto block scale-x-[-1]" />
         </div>
 
       </div>

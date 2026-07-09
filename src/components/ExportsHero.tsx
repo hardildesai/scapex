@@ -63,7 +63,7 @@ export default function ExportsHero(): JSX.Element {
       id="exports-hero"
       className="relative mt-[52px] min-h-[640px] bg-cover bg-center bg-no-repeat flex flex-col justify-between text-white"
       style={{
-        backgroundImage: 'linear-gradient(to right, rgba(19, 10, 2, 0.98) 0%, rgba(19, 10, 2, 0.92) 35%, rgba(19, 10, 2, 0.65) 65%, rgba(19, 10, 2, 0.2) 100%), url("/exports-hero.png")',
+        backgroundImage: 'linear-gradient(to right, rgba(19, 10, 2, 0.98) 0%, rgba(19, 10, 2, 0.92) 35%, rgba(19, 10, 2, 0.65) 65%, rgba(19, 10, 2, 0.2) 100%), url("/exports-hero.webp")',
       }}
     >
       {/* Main Content Area */}

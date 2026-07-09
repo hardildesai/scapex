@@ -70,7 +70,7 @@ export default function Navbar(): JSX.Element {
             className="flex-shrink-0 no-underline flex items-center md:-ml-28"
             aria-label="Scapex Home"
           >
-            <img src="/logo/main-logo.png" alt="Scapex Logo" className="h-10 md:h-11 w-auto object-contain" />
+            <img src="/logo/main-logo.webp" alt="Scapex Logo" className="h-10 md:h-11 w-auto object-contain" />
           </Link>
 
           {/* ── Desktop Links (hidden on mobile) ── */}

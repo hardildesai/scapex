@@ -12,7 +12,7 @@ export default function GlobalImpactMetrics(): JSX.Element {
           {/* Left: image */}
           <div className="overflow-hidden rounded-sm aspect-[4/3] max-h-[380px]">
             <img
-              src="/sust-metrics.png"
+              src="/sust-metrics.webp"
               alt="Tree in solar field"
               className="w-full h-full object-cover object-center block"
             />

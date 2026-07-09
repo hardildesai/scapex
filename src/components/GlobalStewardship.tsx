@@ -54,7 +54,7 @@ export default function GlobalStewardship(): JSX.Element {
         {/* RIGHT: Farmer portrait image */}
         <div className="flex items-stretch">
           <img
-            src="/exports-farmer.png"
+            src="/exports-farmer.webp"
             alt="Indian farmer in field at sunset"
             className="w-full h-full object-cover shadow-sm min-h-[400px] md:min-h-full"
           />

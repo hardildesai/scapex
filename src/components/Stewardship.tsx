@@ -11,7 +11,7 @@ const leaders: Leader[] = [
     id: 'leader-ceo',
     name: 'Rajiv Mehta',
     title: 'Chairman & Chief Executive Officer',
-    img: '/leader1.png',
+    img: '/leader1.webp',
     quote:
       'True leadership is measured not by the scale of what we build, but by the legacy we leave for generations to come.',
   },
@@ -19,7 +19,7 @@ const leaders: Leader[] = [
     id: 'leader-coo',
     name: 'Priya Nair',
     title: 'Chief Operating Officer',
-    img: '/leader2.png',
+    img: '/leader2.webp',
     quote:
       'Global ambition must be rooted in local accountability — every decision we make reflects our commitment to sustainable stewardship.',
   },

@@ -9,7 +9,7 @@ export default function Sustainability(): JSX.Element {
           {/* Left: Single photo */}
           <div className="rounded-xl overflow-hidden h-[400px] md:h-[520px]">
             <img
-              src="/sustainability.png"
+              src="/sustainability.webp"
               alt="Sustainability stacking blocks"
               className="w-full h-full object-cover block"
             />

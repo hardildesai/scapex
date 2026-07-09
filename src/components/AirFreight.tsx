@@ -40,7 +40,7 @@ export default function AirFreight(): JSX.Element {
         {/* RIGHT: Aircraft image with branding card */}
         <div className="relative">
           <img
-            src="/logistics-air.png"
+            src="/logistics-air.webp"
             alt="Scapex cargo aircraft"
             className="w-full aspect-[4/3] object-cover block rounded-[2px]"
           />

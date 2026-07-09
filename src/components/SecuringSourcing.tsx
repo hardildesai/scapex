@@ -38,7 +38,7 @@ export default function SecuringSourcing(): JSX.Element {
 
           {/* LEFT: Farmer image */}
           <img
-            src="/exports-farmer.png"
+            src="/exports-farmer.webp"
             alt="Indian farmer"
             style={{ width: '100%', aspectRatio: '3/4', objectFit: 'cover', borderRadius: '2px', display: 'block' }}
           />

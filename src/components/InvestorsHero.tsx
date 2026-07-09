@@ -1,7 +1,7 @@
 export default function InvestorsHero(): JSX.Element {
   return (
     <section id="investors-hero" className="relative w-full overflow-hidden mt-[84px] min-h-[400px] md:h-[600px]">
-      <img src="/investors-hero.png" alt="Scapex investor relations meeting" className="absolute inset-0 w-full h-full object-cover object-[center_20%]" />
+      <img src="/investors-hero.webp" alt="Scapex investor relations meeting" className="absolute inset-0 w-full h-full object-cover object-[center_20%]" />
       {/* Gradient */}
       <div aria-hidden="true" className="absolute inset-0 bg-[linear-gradient(to_right,rgba(255,255,255,0.05)_0%,rgba(255,255,255,0.55)_38%,rgba(255,255,255,0.88)_65%,rgba(255,255,255,0.95)_100%)]" />
       <div aria-hidden="true" className="absolute inset-0 bg-[linear-gradient(to_bottom,transparent_40%,rgba(255,255,255,0.30)_100%)]" />
