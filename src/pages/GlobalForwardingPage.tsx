@@ -4,9 +4,12 @@ import Footer from '../components/Footer'
 import GlobalForwardingHero from '../components/GlobalForwardingHero'
 import StatsBar from '../components/StatsBar'
 import IntegratedGlobalForwarding from '../components/IntegratedGlobalForwarding'
-import SeaFreight from '../components/SeaFreight'
-import AirFreight from '../components/AirFreight'
-import CustomsCompliance from '../components/CustomsCompliance'
+import ComprehensiveServices from '../components/ComprehensiveServices'
+import CoreCapabilities from '../components/CoreCapabilities'
+import LogisticsProcess from '../components/LogisticsProcess'
+import LogisticsCommitments from '../components/LogisticsCommitments'
+import FreightCorridors from '../components/FreightCorridors'
+import CbmCalculator from '../components/CbmCalculator'
 import GlobalForwardingContactForm from '../components/GlobalForwardingContactForm'
 import ScrollReveal from '../components/ScrollReveal'
 
@@ -24,13 +27,22 @@ export default function GlobalForwardingPage(): JSX.Element {
           <IntegratedGlobalForwarding />
         </ScrollReveal>
         <ScrollReveal>
-          <SeaFreight />
+          <ComprehensiveServices />
         </ScrollReveal>
         <ScrollReveal>
-          <AirFreight />
+          <CoreCapabilities />
         </ScrollReveal>
         <ScrollReveal>
-          <CustomsCompliance />
+          <LogisticsProcess />
+        </ScrollReveal>
+        <ScrollReveal>
+          <LogisticsCommitments />
+        </ScrollReveal>
+        <ScrollReveal>
+          <FreightCorridors />
+        </ScrollReveal>
+        <ScrollReveal>
+          <CbmCalculator />
         </ScrollReveal>
         <ScrollReveal>
           <GlobalForwardingContactForm />
