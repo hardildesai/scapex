@@ -1,29 +1,35 @@
-import { FF_SANS } from './ExportsConstants'
-
 export default function ComplianceCerts(): JSX.Element {
   const certs = [
     { id: 'cert-fssai', title: 'FSSAI', sub: 'Food Safety Standards' },
     { id: 'cert-apeda', title: 'APEDA', sub: 'Agri. & Processed Food' },
     { id: 'cert-haccp', title: 'HACCP', sub: 'Hazard Analysis Control' },
-    { id: 'cert-iso',   title: 'ISO 22000', sub: 'Food Safety Management' },
+    { id: 'cert-iso', title: 'ISO 22000', sub: 'Food Safety Management' },
   ]
   return (
-    <section style={{ background: '#f0ede6', padding: '64px 0' }} id="compliance-certs">
-      <div style={{ maxWidth: 1180, margin: '0 auto', padding: '0 40px' }}>
-        <div style={{ textAlign: 'center', marginBottom: '40px' }}>
-          <h2 style={{ fontFamily: FF_SANS, fontSize: 'clamp(1.4rem, 2.5vw, 2.0rem)', fontWeight: 800, color: '#111', letterSpacing: '-0.04em', marginBottom: '10px' }}>
+    <section id="compliance-certs" className="bg-ice-blue py-16 px-6 md:px-12">
+      <div className="max-w-[1180px] mx-auto">
+        <div className="text-center mb-10">
+          <h2 className="font-serif text-[3rem] font-bold text-[#111] tracking-tight mb-2.5">
             Compliance &amp; Certifications
           </h2>
-          <p style={{ fontFamily: FF_SANS, fontSize: '0.72rem', color: '#666', lineHeight: 1.72, maxWidth: '480px', margin: '0 auto' }}>
+          <p className="font-urbanist text-[0.8rem] text-slate-600 leading-[1.72] max-w-[480px] mx-auto">
             Every export shipment adheres to the highest international food safety standards. Our certifications reflect our commitment to quality and regulatory excellence.
           </p>
         </div>
 
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: '16px' }}>
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
           {certs.map((c) => (
-            <div key={c.id} id={c.id} style={{ background: '#fff', border: '1px solid #e0ddd6', borderRadius: '3px', padding: '24px 20px', textAlign: 'center' }}>
-              <div style={{ fontFamily: FF_SANS, fontSize: '1.1rem', fontWeight: 800, color: '#0d1b2e', letterSpacing: '-0.02em', marginBottom: '6px' }}>{c.title}</div>
-              <div style={{ fontFamily: FF_SANS, fontSize: '0.62rem', color: '#888', letterSpacing: '0.06em', lineHeight: 1.5 }}>{c.sub}</div>
+            <div
+              key={c.id}
+              id={c.id}
+              className="bg-white border border-[#e0ddd6] rounded-[3px] py-6 px-5 text-center shadow-sm hover:shadow-md transition-shadow duration-300"
+            >
+              <div className="font-sans text-[1.1rem] font-bold text-[#0d1b2e] tracking-tight mb-1.5">
+                {c.title}
+              </div>
+              <div className="font-sans text-[0.62rem] text-slate-500 tracking-[0.06em] leading-normal">
+                {c.sub}
+              </div>
             </div>
           ))}
         </div>

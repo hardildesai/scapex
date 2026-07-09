@@ -1,66 +1,80 @@
-import { GOLD, NAVY, FF_SANS } from './ExportsConstants'
-
 export default function TradeExcellence(): JSX.Element {
-  const destinations = [
-    { region: 'Middle East', value: '42,000 MT', pct: '28%' },
-    { region: 'South East Asia', value: '35,000 MT', pct: '24%' },
-    { region: 'Africa', value: '28,000 MT', pct: '19%' },
-    { region: 'Europe', value: '22,000 MT', pct: '15%' },
-    { region: 'Americas', value: '21,000 MT', pct: '14%' },
+  const logisticsData = [
+    { region: 'Middle East', info: 'Bulk & Retail' },
+    { region: 'Europe', info: 'EU Organic Certified' },
+    { region: 'North America', info: 'USDA Organic Supply' },
+    { region: 'Asia Pacific', info: 'Strategic Growth' },
   ]
 
   return (
-    <section style={{ background: NAVY, padding: '72px 0' }} id="trade-excellence">
-      <div style={{ maxWidth: 1180, margin: '0 auto', padding: '0 40px', display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '56px', alignItems: 'center' }}>
+    <section id="trade-excellence" className="bg-[#050f1a] py-20 px-6 md:px-12 text-white">
+      <div className="max-w-[1180px] mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-16 items-center">
 
-        {/* LEFT: Text + stats */}
-        <div>
-          <h2 style={{ fontFamily: FF_SANS, fontSize: 'clamp(1.8rem, 3vw, 2.6rem)', fontWeight: 800, color: '#fff', letterSpacing: '-0.04em', lineHeight: 1.08, marginBottom: '18px' }}>
+        {/* LEFT: Text & Stats */}
+        <div className="flex flex-col items-start">
+          <h2 className="font-serif text-[clamp(2.0rem,4vw,2.8rem)] font-bold leading-tight mb-6">
             Trade Excellence &amp;<br />Seamless Reach
           </h2>
-          <p style={{ fontFamily: FF_SANS, fontSize: '0.72rem', color: 'rgba(255,255,255,0.58)', lineHeight: 1.78, marginBottom: '36px', maxWidth: '380px' }}>
-            Backed by Scapex Group's global trade infrastructure, we deliver Indian agro commodities to 75+ countries with documentation, compliance, and logistics fully managed.
+          <p className="font-urbanist text-[0.82rem] text-slate-400 leading-relaxed max-w-[430px] mb-12">
+            With integrated logistics support from our sister company Scapex Global Forwarding, we ensure competitive freight and cold storage reliability from Indian ports to your destination.
           </p>
 
-          {/* Two key stats */}
-          <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '24px' }}>
+          {/* Two Key Columns */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 w-full max-w-[450px]">
             <div>
-              <div style={{ fontFamily: FF_SANS, fontSize: '2.0rem', fontWeight: 800, color: GOLD, letterSpacing: '-0.04em' }}>75+</div>
-              <div style={{ fontFamily: FF_SANS, fontSize: '0.58rem', color: 'rgba(255,255,255,0.5)', letterSpacing: '0.12em', textTransform: 'uppercase', marginTop: '4px' }}>Countries Reached</div>
+              <span className="block font-sans font-extrabold text-[0.72rem] tracking-wider text-white uppercase mb-2">
+                Market Reach
+              </span>
+              <p className="font-urbanist text-[0.75rem] text-slate-400 leading-relaxed">
+                Active presence in UAE, Saudi Arabia, UK, Germany, USA, and Canada.
+              </p>
             </div>
             <div>
-              <div style={{ fontFamily: FF_SANS, fontSize: '2.0rem', fontWeight: 800, color: GOLD, letterSpacing: '-0.04em' }}>40+</div>
-              <div style={{ fontFamily: FF_SANS, fontSize: '0.58rem', color: 'rgba(255,255,255,0.5)', letterSpacing: '0.12em', textTransform: 'uppercase', marginTop: '4px' }}>Trade Partners</div>
+              <span className="block font-sans font-extrabold text-[0.72rem] tracking-wider text-white uppercase mb-2">
+                Cold Storage
+              </span>
+              <p className="font-urbanist text-[0.75rem] text-slate-400 leading-relaxed">
+                Integrated temperature-sensitive facilities for freshness preservation.
+              </p>
             </div>
           </div>
         </div>
 
-        {/* RIGHT: Dark table card */}
-        <div style={{ background: '#0a1520', borderRadius: '4px', padding: '28px 24px', border: '1px solid rgba(200,168,75,0.15)' }}>
-          <div style={{ fontFamily: FF_SANS, fontSize: '0.56rem', fontWeight: 700, letterSpacing: '0.18em', textTransform: 'uppercase', color: GOLD, marginBottom: '6px' }}>
-            Global Agro Logistics
-          </div>
-          <div style={{ fontFamily: FF_SANS, fontSize: '0.90rem', fontWeight: 700, color: '#fff', marginBottom: '20px' }}>
-            Export Distribution 2024
-          </div>
+        {/* RIGHT: Logistics Card */}
+        <div className="bg-[#0d1b2e] border border-white/5 shadow-2xl rounded-2xl p-8 md:p-10 max-w-md w-full ml-auto">
 
-          {/* Table rows */}
-          <div style={{ display: 'flex', flexDirection: 'column' }}>
-            {/* Header */}
-            <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr 80px', gap: '8px', paddingBottom: '10px', borderBottom: '1px solid rgba(255,255,255,0.08)' }}>
-              {['Region', 'Volume', 'Share'].map(h => (
-                <div key={h} style={{ fontFamily: FF_SANS, fontSize: '0.52rem', fontWeight: 700, color: 'rgba(255,255,255,0.4)', letterSpacing: '0.12em', textTransform: 'uppercase' }}>{h}</div>
-              ))}
-            </div>
-            {destinations.map((d, i) => (
-              <div key={d.region} style={{ display: 'grid', gridTemplateColumns: '1fr 1fr 80px', gap: '8px', padding: '10px 0', borderBottom: i < destinations.length - 1 ? '1px solid rgba(255,255,255,0.05)' : 'none' }}>
-                <div style={{ fontFamily: FF_SANS, fontSize: '0.72rem', color: '#fff' }}>{d.region}</div>
-                <div style={{ fontFamily: FF_SANS, fontSize: '0.72rem', color: GOLD, fontWeight: 600 }}>{d.value}</div>
-                <div style={{ fontFamily: FF_SANS, fontSize: '0.72rem', color: 'rgba(255,255,255,0.55)' }}>{d.pct}</div>
+          <h3 className="font-serif text-3xl font-bold text-[#c8a84b] leading-tight mb-8">
+            Direct Market<br />Logistics
+          </h3>
+
+          {/* Logistics Rows */}
+          <div className="flex flex-col mb-8">
+            {logisticsData.map((item, index) => (
+              <div
+                key={item.region}
+                className={`flex justify-between items-center py-4 ${index < logisticsData.length - 1 ? 'border-b border-white/10' : ''
+                  }`}
+              >
+                <span className="font-urbanist text-[0.85rem] font-bold text-white tracking-wide">
+                  {item.region}
+                </span>
+                <span className="font-urbanist text-[0.8rem] font-bold text-[#c8a84b]">
+                  {item.info}
+                </span>
               </div>
             ))}
           </div>
+
+          {/* CTA Button */}
+          <a
+            href="#contact-form"
+            className="block text-center border border-[#c8a84b] hover:bg-[#c8a84b]/10 transition-colors duration-300 rounded py-3.5 px-6 font-mono font-bold text-[0.72rem] tracking-[0.12em] text-[#c8a84b] uppercase no-underline"
+          >
+            Request Logistics Quote
+          </a>
+
         </div>
+
       </div>
     </section>
   )

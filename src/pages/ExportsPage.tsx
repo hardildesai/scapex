@@ -2,7 +2,6 @@ import AnnouncementBar from '../components/AnnouncementBar'
 import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
 import ExportsHero from '../components/ExportsHero'
-import ExportsStats from '../components/ExportsStats'
 import GlobalStewardship from '../components/GlobalStewardship'
 import ProductPortfolio from '../components/ProductPortfolio'
 import ComplianceCerts from '../components/ComplianceCerts'
@@ -17,13 +16,16 @@ export default function ExportsPage(): JSX.Element {
       <AnnouncementBar />
       <Navbar />
       <main className="overflow-hidden">
-        <ScrollReveal>
-          <ExportsHero />
-          <ExportsStats />
-        </ScrollReveal>
-        <ScrollReveal>
-          <GlobalStewardship />
-        </ScrollReveal>
+        <div className="relative z-20">
+          <ScrollReveal>
+            <ExportsHero />
+          </ScrollReveal>
+        </div>
+        <div className="relative z-10">
+          <ScrollReveal>
+            <GlobalStewardship />
+          </ScrollReveal>
+        </div>
         <ScrollReveal>
           <ProductPortfolio />
         </ScrollReveal>
