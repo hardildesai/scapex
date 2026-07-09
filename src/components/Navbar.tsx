@@ -5,7 +5,7 @@ import { Link, useLocation } from 'react-router-dom'
 const ecosystemLinks = [
   {
     label: 'Logistics',
-    href: '/global-forwarding',
+    href: '/logistics',
     desc: 'End-to-end freight forwarding',
     icon: (
       <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round">
@@ -29,7 +29,7 @@ const ecosystemLinks = [
   },
   {
     label: 'Global Forwarding',
-    href: '/global-forwarding',
+    href: '/logistics',
     desc: 'Sea, air & customs clearance',
     icon: (
       <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round">
@@ -162,8 +162,8 @@ export default function Navbar(): JSX.Element {
                     {/* ── Dropdown Panel ── */}
                     <div
                       className={`absolute top-full left-1/2 -translate-x-1/2 pt-3 w-[320px] transition-all duration-200 origin-top z-50 ${dropdownOpen
-                          ? 'opacity-100 scale-y-100 pointer-events-auto translate-y-0'
-                          : 'opacity-0 scale-y-95 pointer-events-none -translate-y-1'
+                        ? 'opacity-100 scale-y-100 pointer-events-auto translate-y-0'
+                        : 'opacity-0 scale-y-95 pointer-events-none -translate-y-1'
                         }`}
                       role="menu"
                     >
