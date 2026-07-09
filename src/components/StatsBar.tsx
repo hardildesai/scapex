@@ -1,5 +1,4 @@
 import { useState, useEffect, useRef } from 'react'
-import { FF_SANS } from './LogisticsConstants'
 
 interface AnimatedNumberProps {
   value: string
@@ -14,10 +13,10 @@ function AnimatedNumber({ value }: AnimatedNumberProps): JSX.Element {
     // Extract numeric portion (e.g. 5000 from "5,000", 75 from "75+")
     const numericStr = value.replace(/[^0-9]/g, '')
     const target = parseInt(numericStr, 10) || 0
-    
+
     // Extract non-numeric suffixes (e.g. "+", "%", "↑")
     const suffix = value.replace(/[0-9,]/g, '')
-    
+
     // Detect if we need to format with thousands-separating commas
     const hasComma = value.includes(',')
 
@@ -31,21 +30,21 @@ function AnimatedNumber({ value }: AnimatedNumberProps): JSX.Element {
         const [entry] = entries
         if (entry.isIntersecting && !animatedRef.current) {
           animatedRef.current = true
-          
+
           const duration = 1500 // Animation duration: 1.5 seconds
           const startTime = performance.now()
 
           const animate = (currentTime: number) => {
             const elapsed = currentTime - startTime
             const progress = Math.min(elapsed / duration, 1)
-            
+
             // Quad ease-out equation for smooth deceleration
             const easeProgress = progress * (2 - progress)
             const currentCount = Math.floor(easeProgress * target)
 
             // Format numeric value with commas if original had it
-            const formattedNum = hasComma 
-              ? currentCount.toLocaleString('en-US') 
+            const formattedNum = hasComma
+              ? currentCount.toLocaleString('en-US')
               : currentCount.toString()
 
             setDisplayValue(`${formattedNum}${suffix}`)
@@ -77,10 +76,10 @@ function AnimatedNumber({ value }: AnimatedNumberProps): JSX.Element {
 
 export default function StatsBar(): JSX.Element {
   const stats = [
-    { value: '75+',   label: 'Cargo Routes' },
-    { value: '100↑',  label: 'Active Ports' },
+    { value: '75+', label: 'Cargo Routes' },
+    { value: '100↑', label: 'Active Ports' },
     { value: '5,000', label: 'Tonnes/Day' },
-    { value: '99%',   label: 'On-Time Delivery' },
+    { value: '99%', label: 'On-Time Delivery' },
   ]
 
   return (

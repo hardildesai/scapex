@@ -63,7 +63,7 @@ export default function SecuringSourcing(): JSX.Element {
           {/* Right Column: Sourcing Inquiry Form */}
           <form
             onSubmit={(e) => e.preventDefault()}
-            className="bg-white border border-slate-200/80 rounded-xl px-8 py-10 md:px-12 md:py-28 flex flex-col gap-8 shadow-sm"
+            className="bg-white border border-slate-200/80 rounded-xl p-8 md:p-28 flex flex-col gap-8 shadow-sm"
           >
             {/* Input Row 1 */}
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">

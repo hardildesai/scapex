@@ -5,7 +5,7 @@ import Hero from './components/Hero'
 import InvestorsPage from './pages/InvestorsPage'
 import SustainabilityPage from './pages/SustainabilityPage'
 import PartnerPage from './pages/PartnerPage'
-import LogisticsPage from './pages/LogisticsPage'
+import GlobalForwardingPage from './pages/GlobalForwardingPage'
 import ExportsPage from './pages/ExportsPage'
 import Stats from './components/Stats'
 import Architecture from './components/Architecture'
@@ -46,7 +46,7 @@ export default function App(): JSX.Element {
         <Route path="/investors" element={<InvestorsPage />} />
         <Route path="/sustainability" element={<SustainabilityPage />} />
         <Route path="/partner" element={<PartnerPage />} />
-        <Route path="/logistics" element={<LogisticsPage />} />
+        <Route path="/global-forwarding" element={<GlobalForwardingPage />} />
         <Route path="/exports" element={<ExportsPage />} />
       </Routes>
     </BrowserRouter>

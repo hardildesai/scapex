@@ -5,7 +5,7 @@ import { Link, useLocation } from 'react-router-dom'
 const ecosystemLinks = [
   {
     label: 'Logistics',
-    href: '/logistics',
+    href: '/global-forwarding',
     desc: 'End-to-end freight forwarding',
     icon: (
       <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round">
@@ -29,7 +29,7 @@ const ecosystemLinks = [
   },
   {
     label: 'Global Forwarding',
-    href: '/logistics',
+    href: '/global-forwarding',
     desc: 'Sea, air & customs clearance',
     icon: (
       <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round">
@@ -44,19 +44,19 @@ const ecosystemLinks = [
 interface NavLink { label: string; href: string; isRoute?: boolean; hasDropdown?: boolean }
 
 const navLinks: NavLink[] = [
-  { label: 'About',          href: '#about' },
-  { label: 'Our Ecosystem',  href: '#ecosystem', hasDropdown: true },
-  { label: 'Industries',     href: '#industries' },
+  { label: 'About', href: '#about' },
+  { label: 'Our Ecosystem', href: '#ecosystem', hasDropdown: true },
+  { label: 'Industries', href: '#industries' },
   { label: 'Sustainability', href: '/sustainability', isRoute: true },
-  { label: 'Investors',      href: '/investors',     isRoute: true },
-  { label: 'Media',          href: '#media' },
-  { label: 'Careers',        href: '/careers',       isRoute: true },
+  { label: 'Investors', href: '/investors', isRoute: true },
+  { label: 'Media', href: '#media' },
+  { label: 'Careers', href: '/careers', isRoute: true },
 ]
 
 export default function Navbar(): JSX.Element {
-  const [isScrolled,    setIsScrolled]    = useState<boolean>(false)
-  const [menuOpen,      setMenuOpen]      = useState<boolean>(false)
-  const [dropdownOpen,  setDropdownOpen]  = useState<boolean>(false) // desktop hover state
+  const [isScrolled, setIsScrolled] = useState<boolean>(false)
+  const [menuOpen, setMenuOpen] = useState<boolean>(false)
+  const [dropdownOpen, setDropdownOpen] = useState<boolean>(false) // desktop hover state
   const [mobileEcoOpen, setMobileEcoOpen] = useState<boolean>(false) // mobile accordion
   const location = useLocation()
   const dropdownRef = useRef<HTMLLIElement>(null)
@@ -152,7 +152,7 @@ export default function Navbar(): JSX.Element {
                       {/* Chevron */}
                       <svg
                         width="11" height="11" viewBox="0 0 24 24" fill="none"
-                        stroke="#c8a84b" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round"
+                        stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round"
                         className={`transition-transform duration-200 ${dropdownOpen ? 'rotate-180' : ''}`}
                       >
                         <path d="M6 9l6 6 6-6" />
@@ -161,11 +161,10 @@ export default function Navbar(): JSX.Element {
 
                     {/* ── Dropdown Panel ── */}
                     <div
-                      className={`absolute top-full left-1/2 -translate-x-1/2 pt-3 w-[320px] transition-all duration-200 origin-top z-50 ${
-                        dropdownOpen
+                      className={`absolute top-full left-1/2 -translate-x-1/2 pt-3 w-[320px] transition-all duration-200 origin-top z-50 ${dropdownOpen
                           ? 'opacity-100 scale-y-100 pointer-events-auto translate-y-0'
                           : 'opacity-0 scale-y-95 pointer-events-none -translate-y-1'
-                      }`}
+                        }`}
                       role="menu"
                     >
                       {/* Inner Container with styling */}
@@ -286,9 +285,8 @@ export default function Navbar(): JSX.Element {
           MOBILE DRAWER
       ══════════════════════════════════════════ */}
       <div
-        className={`md:hidden fixed inset-0 z-[85] transition-all duration-350 ease-in-out ${
-          menuOpen ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'
-        }`}
+        className={`md:hidden fixed inset-0 z-[85] transition-all duration-350 ease-in-out ${menuOpen ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'
+          }`}
         aria-hidden={!menuOpen}
       >
         {/* Backdrop */}
@@ -296,9 +294,8 @@ export default function Navbar(): JSX.Element {
 
         {/* Drawer panel */}
         <div
-          className={`absolute left-0 right-0 bg-[#0d1b2e] shadow-2xl transition-all duration-350 ease-in-out ${
-            isScrolled ? 'top-[52px]' : 'top-[84px]'
-          } ${menuOpen ? 'translate-y-0' : '-translate-y-4'}`}
+          className={`absolute left-0 right-0 bg-[#0d1b2e] shadow-2xl transition-all duration-350 ease-in-out ${isScrolled ? 'top-[52px]' : 'top-[84px]'
+            } ${menuOpen ? 'translate-y-0' : '-translate-y-4'}`}
         >
           <ul role="list" className="list-none py-2 border-b border-white/10">
             {navLinks.map((link, i) => {
@@ -320,7 +317,7 @@ export default function Navbar(): JSX.Element {
                       {link.label}
                       <svg
                         width="14" height="14" viewBox="0 0 24 24" fill="none"
-                        stroke="#c8a84b" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"
+                        stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"
                         className={`opacity-50 transition-transform duration-250 ${mobileEcoOpen ? 'rotate-90' : ''}`}
                       >
                         <path d="M9 18l6-6-6-6" />

@@ -1,27 +1,27 @@
 import AnnouncementBar from '../components/AnnouncementBar'
 import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
-import LogisticsHero from '../components/LogisticsHero'
+import GlobalForwardingHero from '../components/GlobalForwardingHero'
 import StatsBar from '../components/StatsBar'
-import IntegratedLogistics from '../components/IntegratedLogistics'
+import IntegratedGlobalForwarding from '../components/IntegratedGlobalForwarding'
 import SeaFreight from '../components/SeaFreight'
 import AirFreight from '../components/AirFreight'
 import CustomsCompliance from '../components/CustomsCompliance'
-import LogisticsContactForm from '../components/LogisticsContactForm'
+import GlobalForwardingContactForm from '../components/GlobalForwardingContactForm'
 import ScrollReveal from '../components/ScrollReveal'
 
-export default function LogisticsPage(): JSX.Element {
+export default function GlobalForwardingPage(): JSX.Element {
   return (
     <>
       <AnnouncementBar />
       <Navbar />
       <main className="overflow-hidden">
         <ScrollReveal>
-          <LogisticsHero />
+          <GlobalForwardingHero />
           <StatsBar />
         </ScrollReveal>
         <ScrollReveal>
-          <IntegratedLogistics />
+          <IntegratedGlobalForwarding />
         </ScrollReveal>
         <ScrollReveal>
           <SeaFreight />
@@ -33,7 +33,7 @@ export default function LogisticsPage(): JSX.Element {
           <CustomsCompliance />
         </ScrollReveal>
         <ScrollReveal>
-          <LogisticsContactForm />
+          <GlobalForwardingContactForm />
         </ScrollReveal>
       </main>
       <Footer />
