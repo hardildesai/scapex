@@ -2,95 +2,150 @@ import { useState } from 'react'
 
 export default function SecuringSourcing(): JSX.Element {
   const [form, setForm] = useState({
-    fullName: '', companyName: '', tradeRoute: '', volume: '', notes: ''
+    fullName: '',
+    companyEmail: '',
+    serviceRequired: '',
+    estimatedVolume: '',
+    message: '',
   })
 
   return (
-    <section className="bg-[#faf8f4] py-[72px]" id="sourcing-form">
-      <div className="max-w-[1180px] mx-auto px-6 md:px-10">
+    <section className="bg-white py-20 px-6 md:px-12" id="sourcing-form">
+      <div className="max-w-[1180px] mx-auto">
 
-        {/* Section label + heading */}
-        <div className="text-center mb-12">
-          <p className="font-sans text-[0.54rem] font-bold tracking-[0.20em] uppercase text-[#c8a84b] mb-2.5">
-            Agro Excellence
-          </p>
-          <h2 className="font-sans text-[clamp(1.6rem,2.8vw,2.2rem)] font-extrabold text-[#111] tracking-[-0.04em]">
+        {/* Header Section */}
+        <div className="text-center mb-16">
+          <span className="text-[0.8rem] font-sans font-bold tracking-widest text-[#c8a84b] uppercase block mb-3">
+            Global Partnerships
+          </span>
+          <h2 className="font-serif text-[2.2rem] md:text-[2.6rem] font-bold text-slate-900 leading-tight">
             Securing Your Sourcing
           </h2>
-          <p className="font-sans text-[0.72rem] text-[#666] leading-[1.72] max-w-[440px] mx-auto mt-2.5">
-            Partner with Scapex Agro to access India's finest produce at scale. Submit your sourcing requirements and our export team will respond within 24 hours.
+          <p className="font-urbanist text-[0.85rem] text-slate-500 max-w-[620px] mx-auto mt-4 leading-relaxed font-semibold">
+            Our trade specialists are ready to discuss your requirements, provide samples, and offer competitive market hedging advisory.
           </p>
         </div>
 
-        {/* 2 cols on md+, single col on mobile */}
-        <div className="grid grid-cols-1 md:grid-cols-[40%_60%] gap-10 md:gap-[52px] items-start">
+        {/* 2 Column Layout */}
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-start">
 
-          {/* LEFT: Farmer image — hidden on mobile to save space */}
-          <img
-            src="/exports-farmer.webp"
-            alt="Indian farmer"
-            className="w-full aspect-[3/4] object-cover rounded-sm block hidden md:block"
-          />
+          {/* Left Column: Image and Info Cards */}
+          <div className="flex flex-col gap-6">
+            <div className="relative overflow-hidden rounded-lg">
+              <img
+                src="/exportglobal.webp"
+                alt="Indian farmer plowing field with bulls"
+                className="w-full h-auto object-cover rounded-lg"
+              />
+            </div>
 
-          {/* RIGHT: Form */}
-          <form onSubmit={(e) => e.preventDefault()} className="flex flex-col gap-6">
+            {/* Email Box */}
+            <div className="bg-[#e8f2fe] rounded-lg p-5 flex flex-col">
+              <span className="text-[0.62rem] font-sans font-extrabold tracking-wider text-slate-500 uppercase mb-1">
+                Email Inquiries
+              </span>
+              <span className="font-sans font-bold text-[1.0rem] text-[#0d1b2e]">
+                exports@scapex.com
+              </span>
+            </div>
 
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
-              <div>
-                <label htmlFor="sf-full-name" className="block font-sans text-[0.54rem] font-bold tracking-[0.16em] uppercase text-[#0d1b2e] mb-2">Full Name</label>
-                <input id="sf-full-name" type="text"
-                  className="block w-full bg-transparent border-b border-[#c8c8c4] outline-none font-sans text-[0.76rem] text-[#333] py-1 pb-2.5 transition-colors focus:border-[#c8a84b] placeholder-[#bbb]"
-                  value={form.fullName} onChange={e => setForm({...form, fullName: e.target.value})} />
+            {/* Headquarters Box */}
+            <div className="bg-[#e8f2fe] rounded-lg p-5 flex flex-col">
+              <span className="text-[0.62rem] font-sans font-extrabold tracking-wider text-slate-500 uppercase mb-1">
+                Headquarters
+              </span>
+              <span className="font-sans font-bold text-[1.0rem] text-[#0d1b2e] leading-snug">
+                Andheri East, Mumbai,<br />India
+              </span>
+            </div>
+          </div>
+
+          {/* Right Column: Sourcing Inquiry Form */}
+          <form
+            onSubmit={(e) => e.preventDefault()}
+            className="bg-white border border-slate-200/80 rounded-xl px-8 py-10 md:px-12 md:py-28 flex flex-col gap-8 shadow-sm"
+          >
+            {/* Input Row 1 */}
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+              <div className="flex flex-col">
+                <label htmlFor="sf-fullname" className="text-[0.65rem] font-mono font-extrabold tracking-widest text-[#0d1b2e] uppercase mb-2">
+                  Full Name
+                </label>
+                <input
+                  id="sf-fullname"
+                  type="text"
+                  className="w-full bg-transparent border-b border-slate-300 focus:border-[#c8a84b] outline-none font-mono text-[0.8rem] text-slate-800 pb-2 transition-colors"
+                  value={form.fullName}
+                  onChange={(e) => setForm({ ...form, fullName: e.target.value })}
+                />
               </div>
-              <div>
-                <label htmlFor="sf-company" className="block font-sans text-[0.54rem] font-bold tracking-[0.16em] uppercase text-[#0d1b2e] mb-2">Company Name</label>
-                <input id="sf-company" type="text"
-                  className="block w-full bg-transparent border-b border-[#c8c8c4] outline-none font-sans text-[0.76rem] text-[#333] py-1 pb-2.5 transition-colors focus:border-[#c8a84b] placeholder-[#bbb]"
-                  value={form.companyName} onChange={e => setForm({...form, companyName: e.target.value})} />
+              <div className="flex flex-col">
+                <label htmlFor="sf-email" className="text-[0.65rem] font-mono font-extrabold tracking-widest text-[#0d1b2e] uppercase mb-2">
+                  Company Email
+                </label>
+                <input
+                  id="sf-email"
+                  type="email"
+                  className="w-full bg-transparent border-b border-slate-300 focus:border-[#c8a84b] outline-none font-mono text-[0.8rem] text-slate-800 pb-2 transition-colors"
+                  value={form.companyEmail}
+                  onChange={(e) => setForm({ ...form, companyEmail: e.target.value })}
+                />
               </div>
             </div>
 
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
-              <div>
-                <label htmlFor="sf-trade-route" className="block font-sans text-[0.54rem] font-bold tracking-[0.16em] uppercase text-[#0d1b2e] mb-2">Trade Route</label>
-                <input id="sf-trade-route" type="text" placeholder="Origin → Destination"
-                  className="block w-full bg-transparent border-b border-[#c8c8c4] outline-none font-sans text-[0.76rem] text-[#333] py-1 pb-2.5 transition-colors focus:border-[#c8a84b] placeholder-[#bbb]"
-                  value={form.tradeRoute} onChange={e => setForm({...form, tradeRoute: e.target.value})} />
+            {/* Input Row 2 */}
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+              <div className="flex flex-col">
+                <label htmlFor="sf-service" className="text-[0.65rem] font-mono font-extrabold tracking-widest text-[#0d1b2e] uppercase mb-2">
+                  Service Required
+                </label>
+                <input
+                  id="sf-service"
+                  type="text"
+                  className="w-full bg-transparent border-b border-slate-300 focus:border-[#c8a84b] outline-none font-mono text-[0.8rem] text-slate-800 pb-2 transition-colors"
+                  value={form.serviceRequired}
+                  onChange={(e) => setForm({ ...form, serviceRequired: e.target.value })}
+                />
               </div>
-              <div>
-                <label htmlFor="sf-volume" className="block font-sans text-[0.54rem] font-bold tracking-[0.16em] uppercase text-[#0d1b2e] mb-2">Estimated Volume</label>
-                <input id="sf-volume" type="text" placeholder="e.g. 500 MT / month"
-                  className="block w-full bg-transparent border-b border-[#c8c8c4] outline-none font-sans text-[0.76rem] text-[#333] py-1 pb-2.5 transition-colors focus:border-[#c8a84b] placeholder-[#bbb]"
-                  value={form.volume} onChange={e => setForm({...form, volume: e.target.value})} />
-              </div>
-            </div>
-
-            <div>
-              <label htmlFor="sf-notes" className="block font-sans text-[0.54rem] font-bold tracking-[0.16em] uppercase text-[#0d1b2e] mb-2">Additional Notes</label>
-              <input id="sf-notes" type="text" placeholder="Specific product requirements, packaging, certifications..."
-                className="block w-full bg-transparent border-b border-[#c8c8c4] outline-none font-sans text-[0.76rem] text-[#333] py-1 pb-2.5 transition-colors focus:border-[#c8a84b] placeholder-[#bbb]"
-                value={form.notes} onChange={e => setForm({...form, notes: e.target.value})} />
-            </div>
-
-            {/* Contact info row */}
-            <div className="flex flex-wrap gap-5">
-              <div className="font-sans text-[0.68rem] text-[#555]">
-                <span className="font-bold text-[#111]">📞</span> +91 XXXXXXXXXX
-              </div>
-              <div className="font-sans text-[0.68rem] text-[#555]">
-                <span className="font-bold text-[#111]">✉️</span> agro@scapexgroup.com
+              <div className="flex flex-col">
+                <label htmlFor="sf-volume" className="text-[0.65rem] font-mono font-extrabold tracking-widest text-[#0d1b2e] uppercase mb-2">
+                  Estimated Volume
+                </label>
+                <input
+                  id="sf-volume"
+                  type="text"
+                  className="w-full bg-transparent border-b border-slate-300 focus:border-[#c8a84b] outline-none font-mono text-[0.8rem] text-slate-800 pb-2 transition-colors"
+                  value={form.estimatedVolume}
+                  onChange={(e) => setForm({ ...form, estimatedVolume: e.target.value })}
+                />
               </div>
             </div>
 
+            {/* Input Row 3 */}
+            <div className="flex flex-col">
+              <label htmlFor="sf-message" className="text-[0.65rem] font-mono font-extrabold tracking-widest text-[#0d1b2e] uppercase mb-2">
+                Message
+              </label>
+              <input
+                id="sf-message"
+                type="text"
+                className="w-full bg-transparent border-b border-slate-300 focus:border-[#c8a84b] outline-none font-mono text-[0.8rem] text-slate-800 pb-2 transition-colors"
+                value={form.message}
+                onChange={(e) => setForm({ ...form, message: e.target.value })}
+              />
+            </div>
+
+            {/* Submit Button */}
             <button
               type="submit"
-              id="exports-submit-btn"
-              className="w-full bg-[#c8a84b] text-white font-sans text-[0.68rem] font-extrabold tracking-[0.18em] uppercase py-3.5 px-7 border-none rounded-sm cursor-pointer hover:bg-[#b09038] transition-colors"
+              className="w-full bg-gold hover:bg-[#916d00] text-white font-mono text-[0.72rem] font-bold tracking-[0.16em] uppercase py-4 rounded-lg transition-colors cursor-pointer shadow-md"
             >
               Submit Enquiry
             </button>
           </form>
+
         </div>
+
       </div>
     </section>
   )

@@ -115,8 +115,8 @@ export default function ExportsHero(): JSX.Element {
           </div>
 
           {/* Right Column: Description overlay */}
-          <div className="hidden lg:flex justify-end items-end">
-            <p className="text-right max-w-[500px] ml-auto text-[0.68rem] md:text-[1rem] tracking-[0.06em] font-urbanist font-semibold text-white/95 leading-relaxed [text-shadow:0_2px_4px_rgba(0,0,0,0.6)]">
+          <div className="hidden lg:col-span-5 lg:flex justify-end items-end">
+            <p className="text-right max-w-[460px] ml-auto text-[0.68rem] md:text-[1rem] tracking-[0.06em] font-urbanist font-semibold text-white/95 leading-relaxed [text-shadow:0_2px_4px_rgba(0,0,0,0.6)]">
               SCAPEX EXPORTS BRIDGES THE FARM-TO-FORK JOURNEY WITH UNWAVERING QUALITY, PRECISION-DRIVEN PROCESSING, AND BLOCKCHAIN-BASED TRANSPARENCY.
             </p>
           </div>
