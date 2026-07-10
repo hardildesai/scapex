@@ -6,41 +6,47 @@ interface CapabilityCard {
 
 const capabilities: CapabilityCard[] = [
   {
-    title: 'Cold Chain Logistics',
-    desc: 'Active temp-sensitive monitoring for perishable and pharmaceutical shipments.',
+    title: 'Cargo Insurance',
+    desc: 'Comprehensive coverage for peace of mind against transit risks, loss, and damage globally.',
     icon: (
-      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
-        <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6" />
-      </svg>
-    ),
-  },
-  {
-    title: 'Customs Clearance',
-    desc: 'Expert brokerage handling all tariff classification and regulatory paperwork.',
-    icon: (
-      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#c8a84b" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
         <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
       </svg>
     ),
   },
   {
-    title: 'Warehousing & Dist.',
-    desc: 'Strategic storage locations with integrated pick-pack and inventory control.',
+    title: 'Customs Brokerage',
+    desc: 'Expert navigation of complex tariff codes, documentation, and regulatory compliance to ensure swift clearance.',
     icon: (
-      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
-        <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z" />
-        <polyline points="3.27 6.96 12 12.01 20.73 6.96" />
-        <line x1="12" y1="22.08" x2="12" y2="12" />
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#c8a84b" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
+        <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
+        <polyline points="14 2 14 8 20 8" />
+        <line x1="16" y1="13" x2="8" y2="13" />
+        <line x1="16" y1="17" x2="8" y2="17" />
       </svg>
     ),
   },
   {
-    title: 'Last-Mile Consulting',
-    desc: 'Optimized routing and distribution design to streamline final stage delivery.',
+    title: 'Warehousing & Distribution',
+    desc: 'Secure, scalable storage solutions coupled with efficient order fulfillment and last-mile distribution.',
     icon: (
-      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
-        <path d="M12 22s-8-4.5-8-11.8A8 8 0 0 1 12 2a8 8 0 0 1 8 8.2c0 7.3-8 11.8-8 11.8z" />
-        <circle cx="12" cy="10" r="3" />
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#c8a84b" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
+        <path d="M3 21h18" />
+        <path d="M5 21V8l7-4 7 4v13" />
+        <path d="M9 21v-6a3 3 0 0 1 6 0v6" />
+      </svg>
+    ),
+  },
+  {
+    title: 'Logistics Consulting',
+    desc: 'Strategic supply chain analysis, route optimization, and cost-reduction modeling for modern enterprises.',
+    icon: (
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#c8a84b" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
+        <circle cx="5" cy="18" r="2" />
+        <circle cx="12" cy="11" r="2" />
+        <circle cx="19" cy="6" r="2" />
+        <line x1="7" y1="16.5" x2="10" y2="12.5" />
+        <line x1="14" y1="9.5" x2="17" y2="7.5" />
       </svg>
     ),
   },
@@ -48,22 +54,20 @@ const capabilities: CapabilityCard[] = [
 
 export default function CoreCapabilities(): JSX.Element {
   return (
-    <section className="bg-white py-20 px-6 md:px-12" id="core-capabilities">
+    <section className="bg-[#fcfaf6] py-20 px-6 md:px-12" id="core-capabilities">
       <div className="max-w-[1180px] mx-auto">
         
         {/* Section Header */}
-        <div className="flex flex-col md:flex-row md:justify-between md:items-end mb-16 gap-6">
-          <div>
-            <span className="text-[0.70rem] font-bold tracking-[0.20em] uppercase text-gold block mb-2">
-              Beyond the Ports
-            </span>
-            <h2 className="font-serif text-[clamp(2.0rem,3.5vw,2.6rem)] font-bold text-[#0d1b2e] leading-tight">
-              Core Capabilities
-            </h2>
-            <div className="w-16 h-[3px] bg-gold mt-4" />
-          </div>
-          <p className="font-urbanist text-[0.80rem] text-[#666] max-w-[380px] text-left md:text-right leading-relaxed font-semibold">
-            Professional end-to-end freight forwarding managed with surgical precision and modern supply chain technology.
+        <div className="text-center mb-16 max-w-[700px] mx-auto">
+          <span className="text-[0.70rem] font-extrabold tracking-[0.25em] uppercase text-[#c8a84b] block mb-3">
+            Beyond the Basics
+          </span>
+          <h2 className="font-serif text-[clamp(2.0rem,3.5vw,2.4rem)] font-bold text-[#0d1b2e] leading-tight">
+            Value Added Services
+          </h2>
+          <div className="w-16 h-[3px] bg-[#c8a84b] mx-auto mt-4" />
+          <p className="font-urbanist text-[0.80rem] text-[#555] leading-relaxed font-semibold mt-6">
+            Comprehensive logistics support encompassing Cargo Insurance, Customs Brokerage, Warehousing, and Strategic Logistics Consulting to streamline your entire supply chain.
           </p>
         </div>
 
@@ -72,7 +76,7 @@ export default function CoreCapabilities(): JSX.Element {
           {capabilities.map((item, index) => (
             <div
               key={index}
-              className="bg-[#faf8f4] border border-[#e8e8e4] rounded-xl p-8 transition-all duration-300 hover:shadow-md hover:scale-[1.01] hover:border-gold/30"
+              className="bg-white border border-[#f0ebe0] rounded-[20px] p-8 transition-all duration-300 hover:shadow-lg hover:-translate-y-1"
             >
               {/* Icon */}
               <div className="text-gold mb-6">
@@ -80,7 +84,7 @@ export default function CoreCapabilities(): JSX.Element {
               </div>
 
               {/* Title */}
-              <h3 className="font-serif text-[1.05rem] font-bold text-[#0d1b2e] mb-3">
+              <h3 className="font-serif text-[1.1rem] font-bold text-[#0d1b2e] mb-3">
                 {item.title}
               </h3>
 

@@ -54,7 +54,7 @@ export default function FreightCorridors(): JSX.Element {
   return (
     <section className="bg-[#051124] py-24 px-6 md:px-12 text-white" id="freight-corridors">
       <div className="max-w-[1180px] mx-auto">
-        
+
         {/* Section Header */}
         <div className="text-center mb-16">
           <h2 className="font-serif text-[clamp(1.6rem,3.5vw,2.2rem)] font-normal text-white">
@@ -87,16 +87,16 @@ export default function FreightCorridors(): JSX.Element {
                   key={idx}
                   className="border-b border-white/10 hover:bg-white/[0.02] transition-colors duration-150"
                 >
-                  <td className="py-4.5 pr-6 font-sans text-[0.85rem] font-medium text-white tracking-wide">
+                  <td className="py-4.5 pr-6 font-urbanist text-[0.85rem] font-medium text-white tracking-wide">
                     {row.lane}
                   </td>
-                  <td className="py-4.5 px-6 font-sans text-[0.82rem] font-normal text-slate-300">
+                  <td className="py-4.5 px-6 font-urbanist text-[0.82rem] font-normal text-slate-300">
                     {row.mode}
                   </td>
-                  <td className="py-4.5 px-6 font-sans text-[0.82rem] font-normal text-slate-300">
+                  <td className="py-4.5 px-6 font-urbanist text-[0.82rem] font-normal text-slate-300">
                     {row.transit}
                   </td>
-                  <td className="py-4.5 pl-6 font-sans text-[0.82rem] font-normal text-slate-300">
+                  <td className="py-4.5 pl-6 font-urbanist text-[0.82rem] font-normal text-slate-300">
                     {row.frequency}
                   </td>
                 </tr>

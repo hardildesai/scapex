@@ -1,3 +1,5 @@
+import ScrollReveal from './ScrollReveal'
+
 interface ProcessStep {
   title: string
   desc: string
@@ -63,31 +65,33 @@ export default function LogisticsProcess(): JSX.Element {
             {steps.map((step, idx) => {
               const isEven = idx % 2 === 0
               return (
-                <div key={idx} className="relative flex flex-col md:flex-row items-center w-full">
-                  
-                  {/* Content block */}
-                  <div className={`w-full md:w-1/2 flex ${isEven ? 'md:justify-end md:pr-16' : 'md:justify-start md:pl-16 md:order-2'}`}>
-                    <div className={`w-full max-w-[440px] ${
-                      isEven ? 'text-left md:text-right' : 'text-left'
-                    }`}>
-                      <h3 className="font-serif text-[1.15rem] font-bold text-white mb-2 leading-tight">
-                        {step.title}
-                      </h3>
-                      <p className="font-sans text-[0.82rem] text-slate-400 leading-relaxed">
-                        {step.desc}
-                      </p>
+                <ScrollReveal key={idx}>
+                  <div className="relative flex flex-col md:flex-row items-center w-full">
+                    
+                    {/* Content block */}
+                    <div className={`w-full md:w-1/2 flex ${isEven ? 'md:justify-end md:pr-16' : 'md:justify-start md:pl-16 md:order-2'}`}>
+                      <div className={`w-full max-w-[440px] ${
+                        isEven ? 'text-left md:text-right' : 'text-left'
+                      }`}>
+                        <h3 className="font-serif text-[1.15rem] font-bold text-white mb-2 leading-tight">
+                          {step.title}
+                        </h3>
+                        <p className="font-sans text-[0.82rem] text-slate-400 leading-relaxed">
+                          {step.desc}
+                        </p>
+                      </div>
                     </div>
+
+                    {/* Number Circle Node (Center) */}
+                    <div className="absolute left-0 md:left-1/2 -translate-x-1/2 top-1/2 -translate-y-1/2 w-9 h-9 rounded-lg bg-[#c8a84b] text-[#0d1b2e] text-[0.85rem] font-sans font-bold flex items-center justify-center shadow-[0_0_15px_rgba(200,168,75,0.45)] z-20 shrink-0">
+                      {idx + 1}
+                    </div>
+
+                    {/* Spacer for desktop */}
+                    <div className={`hidden md:block w-1/2 ${isEven ? 'order-2' : ''}`} />
+
                   </div>
-
-                  {/* Number Circle Node (Center) */}
-                  <div className="absolute left-0 md:left-1/2 -translate-x-1/2 top-1/2 -translate-y-1/2 w-9 h-9 rounded-lg bg-[#c8a84b] text-[#0d1b2e] text-[0.85rem] font-sans font-bold flex items-center justify-center shadow-[0_0_15px_rgba(200,168,75,0.45)] z-20 shrink-0">
-                    {idx + 1}
-                  </div>
-
-                  {/* Spacer for desktop */}
-                  <div className={`hidden md:block w-1/2 ${isEven ? 'order-2' : ''}`} />
-
-                </div>
+                </ScrollReveal>
               )
             })}
           </div>
