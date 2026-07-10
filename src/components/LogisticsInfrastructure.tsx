@@ -20,7 +20,7 @@ const bullets: Bullet[] = [
 
 export default function LogisticsInfrastructure(): JSX.Element {
   return (
-    <section className="bg-white py-24 px-6 md:px-10" id="logistics-infrastructure">
+    <section className="bg-warm-cream py-24 px-6 md:px-10" id="logistics-infrastructure">
       <div className="max-w-[1180px] mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
 
         {/* ── Left: Text ── */}

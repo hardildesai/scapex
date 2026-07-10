@@ -1,6 +1,8 @@
+import AnimatedCounter from './AnimatedCounter'
+
 export default function LogisticsEndToEnd(): JSX.Element {
   return (
-    <section className="bg-[#faf8f4] py-24 px-6 md:px-10" id="end-to-end">
+    <section className="bg-warm-cream py-24 px-6 md:px-10" id="end-to-end">
       <div className="max-w-[1180px] mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-start">
 
         {/* ── Left: Big Heading ── */}
@@ -20,7 +22,7 @@ export default function LogisticsEndToEnd(): JSX.Element {
             {/* Stat 1 */}
             <div>
               <div className="font-serif text-[2.8rem] font-bold text-[#c8a84b] leading-none">
-                75+
+                <AnimatedCounter end={75} suffix="+" />
               </div>
               <div className="font-sans text-[0.70rem] font-bold tracking-[0.12em] uppercase text-[#0d1b2e] mt-2">
                 Ocean Routes Served

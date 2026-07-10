@@ -1,6 +1,6 @@
 export default function LogisticsServicesGrid(): JSX.Element {
   return (
-    <section className="bg-[#faf8f4] py-24 px-6 md:px-10" id="logistics-services">
+    <section className="bg-warm-cream py-24 px-6 md:px-10" id="logistics-services">
       <div className="max-w-[1180px] mx-auto">
 
         {/* ── Title ── */}
@@ -8,7 +8,7 @@ export default function LogisticsServicesGrid(): JSX.Element {
           <h2 className="font-serif text-[2.4rem] font-bold text-[#0d1b2e] tracking-tight leading-none">
             Our Logistics Services
           </h2>
-          <div className="w-24 h-1 bg-[#c8a84b] mt-5" />
+          <div className="w-24 h-1 bg-gold mt-5" />
         </div>
 
         {/* ── 3-Column Grid ── */}
@@ -23,7 +23,7 @@ export default function LogisticsServicesGrid(): JSX.Element {
               className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-[1.03]"
             />
             {/* Semi-transparent white/grey frosted overlay covering the entire container */}
-            <div className="absolute inset-0 bg-[#faf8f4]/75 backdrop-blur-md" />
+            <div className="absolute inset-0 bg-[#faf8f4]/65 backdrop-blur-[1px]" />
 
             {/* Content (z-10 relative) */}
             <div className="relative z-10 h-full flex flex-col justify-between">

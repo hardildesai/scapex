@@ -16,21 +16,21 @@ export default function LogisticsPageHero(): JSX.Element {
           <div>
             {/* Top Badge */}
             <div className="mb-6">
-              <span className="inline-flex items-center gap-2 bg-white/5 border border-white/20 text-white text-[0.68rem] font-bold tracking-[0.14em] uppercase px-4 py-2 rounded-full">
+              <span className="inline-flex font-urbanist items-center gap-2 bg-white/5 border border-white/20 text-white text-[0.68rem] font-bold tracking-[0.14em] uppercase px-4 py-2 rounded-full">
                 <span className="w-1.5 h-1.5 rounded-full bg-[#f5a31c]" />
                 END-TO-END SUPPLY CHAIN
               </span>
             </div>
 
             {/* Heading */}
-            <h1 className="font-serif font-bold text-white leading-[1.08] tracking-tight mb-6 text-[clamp(2.4rem,5vw,3.6rem)]">
+            <h1 className="font-bricolage font-bold text-white leading-[1.08] tracking-tight mb-6 text-[clamp(2.4rem,5vw,3.6rem)]">
               Reliable Logistics<br />
               Solutions for a<br />
               Connected World
             </h1>
 
             {/* Subtitle */}
-            <p className="font-urbanist text-[0.85rem] text-white/70 leading-[1.78] max-w-[480px] mb-10 font-medium">
+            <p className="font-urbanist uppercase text-[0.85rem] text-white/70 leading-[1.78] max-w-[480px] mb-10 font-medium">
               From warehousing to last-mile delivery, Scapex manages your entire supply chain with precision, speed, and full visibility.
             </p>
 
@@ -68,12 +68,12 @@ export default function LogisticsPageHero(): JSX.Element {
           <div className="flex justify-center lg:justify-end">
             <div
               id="track-cargo"
-              className="bg-black/20 border border-white/10 rounded-2xl p-8 backdrop-blur-2xl w-full max-w-[340px] shadow-2xl transition-all duration-300"
+              className="bg-black/10 border border-white/10 rounded-2xl p-8 backdrop-blur-xl w-full max-w-[340px] shadow-2xl transition-all duration-300"
             >
               <h3 className="font-serif text-[1.5rem] font-bold text-white mb-6">
                 Track Cargo
               </h3>
-              
+
               <div className="mb-4">
                 <input
                   type="text"
@@ -84,7 +84,7 @@ export default function LogisticsPageHero(): JSX.Element {
 
               <button
                 type="button"
-                className="w-full bg-[#f5a31c] text-[#0d1b2e] font-sans font-bold text-[0.78rem] py-3.5 rounded-lg hover:bg-[#ffb438] transition-all duration-200 cursor-pointer shadow-md"
+                className="w-full bg-[#f5a31c] text-[#0d1b2e] font-mono font-bold text-[0.78rem] py-3.5 rounded-lg hover:bg-[#ffb438] transition-all duration-200 cursor-pointer shadow-md"
               >
                 Track Now
               </button>
