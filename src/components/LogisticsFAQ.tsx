@@ -32,7 +32,7 @@ export default function LogisticsFAQ(): JSX.Element {
   const [openIdx, setOpenIdx] = useState<number | null>(null)
 
   return (
-    <section className="bg-warm-cream py-24 px-6 md:px-10" id="logistics-faq">
+    <section className="bg-[#faf8f4] py-14 md:py-24 px-5 md:px-10" id="logistics-faq">
       <div className="max-w-[760px] mx-auto">
 
         {/* Header */}

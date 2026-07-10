@@ -43,7 +43,7 @@ export default function PartnerHero(): JSX.Element {
         </div>
 
         {/* ── Right: Image ── */}
-        <div className="relative w-full h-[516px] rounded-2xl overflow-hidden shadow-xl mt-4 md:mt-0 z-10">
+        <div className="relative w-full h-[280px] md:h-[516px] rounded-2xl overflow-hidden shadow-xl mt-4 md:mt-0 z-10">
           <img
             src="/partner-hero.webp"
             alt="Cargo container ship at port"

@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom'
 
 export default function LogisticsCTA(): JSX.Element {
   return (
-    <section className="bg-warm-cream py-24 px-6 md:px-10 text-center" id="logistics-contact">
+    <section className="bg-[#faf8f4] py-14 md:py-24 px-5 md:px-10 text-center" id="logistics-contact">
       <div className="max-w-[660px] mx-auto">
 
         <h2 className="font-serif text-[clamp(2.0rem,5vw,2.8rem)] font-bold text-[#0d1b2e] tracking-tight leading-[1.1] mb-5">

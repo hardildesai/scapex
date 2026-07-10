@@ -11,7 +11,7 @@ export default function ExportsHero(): JSX.Element {
       }}
     >
       {/* Main Content Area */}
-      <div className="w-full max-w-7xl mx-auto px-6 md:px-12 pt-16 pb-28 md:pb-36 flex-grow flex flex-col justify-center">
+      <div className="w-full max-w-7xl mx-auto px-5 md:px-12 pt-14 pb-10 md:pb-36 flex-grow flex flex-col justify-center">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-end w-full">
 
           {/* Left Column: Heading & CTAs */}
@@ -26,10 +26,10 @@ export default function ExportsHero(): JSX.Element {
 
             {/* Heading */}
             <h1 className="font-bricolage font-bold tracking-tight leading-[1.08] mb-8 text-left">
-              <span className="block text-[clamp(1.8rem,4.5vw,3.6rem)] text-white">
+              <span className="block text-[clamp(1.8rem,7vw,3.6rem)] text-white">
                 Premium Agro Commodities
               </span>
-              <span className="block text-[clamp(1.8rem,4.5vw,3.6rem)] text-white">
+              <span className="block text-[clamp(1.8rem,7vw,3.6rem)] text-white">
                 From{' '}
                 <span className="font-serif italic font-semibold text-[#c8a84b]">
                   India's Heartlands
@@ -68,9 +68,9 @@ export default function ExportsHero(): JSX.Element {
         </div>
       </div>
 
-      {/* Stats Bar at Bottom (Overlapping Hero & Next Section) */}
-      <div className="absolute bottom-0 left-0 right-0 translate-y-1/2 z-20 px-6">
-        <div className="max-w-7xl mx-auto bg-[#1c0f01] rounded-2xl py-8 px-6 border border-white/10 shadow-2xl grid grid-cols-2 md:grid-cols-4 gap-y-6 gap-x-4">
+      {/* Stats Bar — static on mobile, absolute (overlapping) on lg+ */}
+      <div className="relative lg:absolute lg:bottom-0 lg:left-0 lg:right-0 lg:translate-y-1/2 lg:z-20 px-5 md:px-6 mt-0 lg:mt-0 pb-6 lg:pb-0">
+        <div className="max-w-7xl mx-auto bg-[#1c0f01] rounded-2xl py-7 md:py-8 px-5 md:px-6 border border-white/10 shadow-2xl grid grid-cols-2 md:grid-cols-4 gap-y-5 gap-x-4">
 
           {/* Stat 1 */}
           <div className="text-center">

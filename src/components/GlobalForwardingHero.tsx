@@ -8,7 +8,7 @@ export default function LogisticsHero(): JSX.Element {
         {/* LEFT: Text */}
         <div className="relative bg-white flex flex-col justify-center z-10 logistics-hero-left">
           {/* Content Wrapper aligned to the standard container left boundary */}
-          <div className="w-full max-w-[550px] ml-auto py-[60px] px-10 md:py-[60px] md:px-10 box-border logistics-hero-wrapper">
+          <div className="w-full md:max-w-[550px] md:ml-auto py-10 md:py-[60px] px-6 md:px-10 box-border">
             {/* Label Badge */}
             <div className="mb-5">
               <span className="inline-block font-serif italic text-[0.62rem] font-semibold text-gold bg-gold/15 py-[6px] px-[14px] rounded-[20px] tracking-[0.04em]">

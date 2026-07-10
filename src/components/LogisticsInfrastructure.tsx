@@ -20,7 +20,7 @@ const bullets: Bullet[] = [
 
 export default function LogisticsInfrastructure(): JSX.Element {
   return (
-    <section className="bg-warm-cream py-24 px-6 md:px-10" id="logistics-infrastructure">
+    <section className="bg-white py-14 md:py-24 px-5 md:px-10" id="logistics-infrastructure">
       <div className="max-w-[1180px] mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
 
         {/* ── Left: Text ── */}
@@ -48,7 +48,7 @@ export default function LogisticsInfrastructure(): JSX.Element {
         </div>
 
         {/* ── Right: Control Room Image ── */}
-        <div className="relative rounded-2xl overflow-hidden shadow-2xl h-[340px] md:h-[420px] border border-[#e8e8e4]">
+        <div className="relative rounded-2xl overflow-hidden shadow-2xl h-[280px] md:h-[420px] border border-[#e8e8e4]">
           <img
             src="/logistics-control-room.png"
             alt="Scapex Logistics Operations Center"

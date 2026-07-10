@@ -200,8 +200,10 @@ export default function ComprehensiveServices(): JSX.Element {
     const scrollContainer = scrollRef.current
     if (!scrollContainer) return
 
-    // Calculate active slide index (card width + gap is 340 + 24 = 364)
-    const index = Math.round(scrollContainer.scrollLeft / 364)
+    const cardEl = scrollContainer.firstElementChild as HTMLElement
+    const cardWidth = cardEl ? cardEl.offsetWidth + 24 : 364 // 24px is gap-6
+
+    const index = Math.round(scrollContainer.scrollLeft / cardWidth)
     setActiveIndex(index % services.length)
   }
 
@@ -211,7 +213,9 @@ export default function ComprehensiveServices(): JSX.Element {
 
     setIsScrolling(true)
 
-    const cardOffset = 364
+    const cardEl = scrollContainer.firstElementChild as HTMLElement
+    const cardOffset = cardEl ? cardEl.offsetWidth + 24 : 364
+
     const currentScroll = scrollContainer.scrollLeft
     const halfWidth = scrollContainer.scrollWidth / 2
 
@@ -299,7 +303,7 @@ export default function ComprehensiveServices(): JSX.Element {
           {extendedServices.map((item, index) => (
             <div
               key={index}
-              className={`w-[310px] md:w-[340px] shrink-0 rounded-xl p-8 flex flex-col justify-between border transition-all duration-300 hover:-translate-y-1.5 shadow-lg ${
+              className={`w-[280px] sm:w-[325px] md:w-[340px] shrink-0 rounded-xl p-8 flex flex-col justify-between border transition-all duration-300 hover:-translate-y-1.5 shadow-lg ${
                 item.isDark
                   ? 'bg-[#0d1b2e] border-gold/40 text-white shadow-gold/5'
                   : 'bg-white border-[#e8e8e4] text-[#0d1b2e]'
@@ -352,7 +356,9 @@ export default function ComprehensiveServices(): JSX.Element {
                 const scrollContainer = scrollRef.current
                 if (scrollContainer) {
                   setIsScrolling(true)
-                  scrollContainer.scrollTo({ left: idx * 364, behavior: 'smooth' })
+                  const cardEl = scrollContainer.firstElementChild as HTMLElement
+                  const cardOffset = cardEl ? cardEl.offsetWidth + 24 : 364
+                  scrollContainer.scrollTo({ left: idx * cardOffset, behavior: 'smooth' })
                   setTimeout(() => setIsScrolling(false), 1000)
                 }
               }}

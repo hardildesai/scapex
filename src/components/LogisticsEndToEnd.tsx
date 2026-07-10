@@ -2,7 +2,7 @@ import AnimatedCounter from './AnimatedCounter'
 
 export default function LogisticsEndToEnd(): JSX.Element {
   return (
-    <section className="bg-warm-cream py-24 px-6 md:px-10" id="end-to-end">
+    <section className="bg-warm-cream py-14 md:py-24 px-6 md:px-10" id="end-to-end">
       <div className="max-w-[1180px] mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-start">
 
         {/* ── Left: Big Heading ── */}

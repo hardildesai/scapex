@@ -1,21 +1,21 @@
 export default function LogisticsServicesGrid(): JSX.Element {
   return (
-    <section className="bg-warm-cream py-24 px-6 md:px-10" id="logistics-services">
+    <section className="bg-warm-cream py-14 md:py-24 px-5 md:px-10" id="logistics-services">
       <div className="max-w-[1180px] mx-auto">
 
         {/* ── Title ── */}
         <div className="mb-14">
-          <h2 className="font-serif text-[2.4rem] font-bold text-[#0d1b2e] tracking-tight leading-none">
+          <h2 className="font-serif text-[clamp(1.8rem,5vw,2.4rem)] font-bold text-[#0d1b2e] tracking-tight leading-tight">
             Our Logistics Services
           </h2>
           <div className="w-24 h-1 bg-gold mt-5" />
         </div>
 
         {/* ── 3-Column Grid ── */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6">
 
           {/* ── Card 1: Freight Forwarding (spans 2 cols) ── */}
-          <div className="md:col-span-2 relative rounded-xl overflow-hidden min-h-[300px] md:min-h-[340px] group border border-[#e8e8e4] shadow-sm flex flex-col justify-between p-8 md:p-10">
+          <div className="md:col-span-2 relative rounded-xl overflow-hidden min-h-[260px] md:min-h-[340px] group border border-[#e8e8e4] shadow-sm flex flex-col justify-between p-7 md:p-10">
             {/* Background Image */}
             <img
               src="/logistics-hero.webp"
@@ -46,7 +46,7 @@ export default function LogisticsServicesGrid(): JSX.Element {
           </div>
 
           {/* ── Card 2: Road Transportation ── */}
-          <div className="bg-white border border-[#e8e8e4] rounded-xl p-8 md:p-10 shadow-sm flex flex-col justify-between min-h-[300px] md:min-h-[340px] transition-all duration-300 hover:scale-[1.01]">
+          <div className="bg-white border border-[#e8e8e4] rounded-xl p-7 md:p-10 shadow-sm flex flex-col justify-between min-h-[220px] md:min-h-[340px] transition-all duration-300 hover:scale-[1.01]">
             <div className="text-[#c8a84b] mb-12">
               {/* Gold truck icon */}
               <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
@@ -68,7 +68,7 @@ export default function LogisticsServicesGrid(): JSX.Element {
           </div>
 
           {/* ── Card 3: Warehousing ── */}
-          <div className="bg-[#081225] border border-white/5 rounded-xl p-8 md:p-10 shadow-lg flex flex-col justify-between min-h-[300px] md:min-h-[320px] transition-all duration-300 hover:scale-[1.01]">
+          <div className="bg-[#081225] border border-white/5 rounded-xl p-7 md:p-10 shadow-lg flex flex-col justify-between min-h-[220px] md:min-h-[320px] transition-all duration-300 hover:scale-[1.01]">
             <div className="text-[#c8a84b] mb-12">
               {/* Gold warehouse icon */}
               <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
@@ -88,7 +88,7 @@ export default function LogisticsServicesGrid(): JSX.Element {
           </div>
 
           {/* ── Card 4: Customs Brokerage ── */}
-          <div className="bg-white border border-[#e8e8e4] rounded-xl p-8 md:p-10 shadow-sm flex flex-col justify-between min-h-[300px] md:min-h-[320px] transition-all duration-300 hover:scale-[1.01]">
+          <div className="bg-white border border-[#e8e8e4] rounded-xl p-7 md:p-10 shadow-sm flex flex-col justify-between min-h-[220px] md:min-h-[320px] transition-all duration-300 hover:scale-[1.01]">
             <div className="text-[#c8a84b] mb-12">
               {/* Gold shield outline icon */}
               <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
@@ -107,7 +107,7 @@ export default function LogisticsServicesGrid(): JSX.Element {
           </div>
 
           {/* ── Card 5: Cold Chain ── */}
-          <div className="bg-[#f4efe8] border border-[#e0dacd] rounded-xl p-8 md:p-10 shadow-sm flex flex-col justify-between min-h-[300px] md:min-h-[320px] transition-all duration-300 hover:scale-[1.01]">
+          <div className="bg-[#f4efe8] border border-[#e0dacd] rounded-xl p-7 md:p-10 shadow-sm flex flex-col justify-between min-h-[220px] md:min-h-[320px] transition-all duration-300 hover:scale-[1.01]">
             <div className="text-[#3b82f6] mb-12">
               {/* Blue snowflake icon */}
               <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
